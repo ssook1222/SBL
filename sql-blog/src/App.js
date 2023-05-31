@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Main from './components/main.jsx'
+import Main from './view/main.jsx'
 
 function App() {
   return (
