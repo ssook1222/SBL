@@ -1,0 +1,85 @@
+@media screen and (max-width: 280px){
+
+    #contents{
+        width: 90% !important;
+    }
+
+    .container{
+        flex-direction: column !important;
+    }
+
+    /* 사진 사이즈 각각 맞춰주기 */
+    #top1{
+        width: 200px !important;
+    }
+
+    #top2{
+        width: 200px !important;
+    }
+
+    #top3{
+        width: 200px !important;
+    }
+
+    .sub-container{
+        margin-left: 0px !important;
+    }
+}
+
+
+@media screen and (min-width: 281px) and (max-width: 412px){
+
+    #contents{
+        width: 90% !important;
+    }
+
+    .container{
+        flex-direction: column !important;
+    }
+
+    /* 사진 사이즈 각각 맞춰주기 */
+    #top1{
+        width: 200px !important;
+    }
+
+    #top2{
+        width: 200px !important;
+    }
+
+    #top3{
+        width: 200px !important;
+    }
+
+    .sub-container{
+        margin-left: 0px !important;
+    }
+}
+
+@media screen and (min-width: 413px) and (max-width: 541px){
+
+    #contents{
+        width: 90% !important;
+    }
+
+    .container{
+        flex-direction: column !important;
+    }
+
+    /* 사진 사이즈 각각 맞춰주기 */
+    #top1{
+        width: 300px !important;
+    }
+
+    #top2{
+        width: 300px !important;
+    }
+
+    #top3{
+        width: 300px !important;
+    }
+
+    .sub-container{
+        margin-left: 0px !important;
+    }
+}
+
