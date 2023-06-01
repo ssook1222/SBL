@@ -9,7 +9,7 @@ function Main_view(){
             <Navbar></Navbar>
             <img style = {{width: '100%'}} src='/img/sql_blog_main.png'></img>
             
-            <div style = {{width: "60%", margin:"auto"}}>
+            <div style = {{width: "60%", margin:"auto", marginBottom: "50px"}}>
                 <h1 style={{fontWeight:"200", fontSize:"1rem", marginTop:"5%", marginBottom:"1%"}}>
                     <i> 추천 포스팅 </i>
                 </h1>
@@ -18,8 +18,28 @@ function Main_view(){
                     SQL 관련 포스팅 중 추천하는 포스팅입니다.
                 </h5>
 
+                <div style={{display: "flex", alignItems: "center"}}>
+                    <figure className="figure" style={{width:"300px"}}>
+                        <img style={{height: '30%', boxShadow: "5px 5px 5px 5px #E2E2E2"}} 
+                            src='/img/ceft.png' 
+                            className="figure-img img-fluid rounded" 
+                            alt="..." />
+                    </figure>
+                    <div style={{marginLeft: "30px"}}>
+                        <h5 style={{marginBottom: "0"}}>SQLD, ADSP, DASP 자격증 취득 후기</h5>
+                        <br></br>
+                        <p>
+                        오늘 딱 DASP 자격증 취득을 끝내며, <br />
+                        한국데이터산업진흥원에서 주관하는 자격증들 중 빅분기(빅데이터분석기사)를 제외한 자격증 취득을 완료했다! <br />
+                            ...
+                        </p>
+                    </div>
+                </div>
+
+                <hr />
+
                 <div style={{display: "flex", alignItems: "center", marginBottom: '0'}}>
-                    <figure className="figure" style={{width:"50rem"}}>
+                    <figure className="figure" style={{width:"550px"}}>
                         <img style={{height: '30%', boxShadow: "5px 5px 5px 5px #E2E2E2"}} 
                             src='/img/thumb_nail.png' 
                             className="figure-img img-fluid rounded" 
@@ -41,7 +61,7 @@ function Main_view(){
                 <hr></hr>
 
                 <div style={{display: "flex", alignItems: "center"}}>
-                    <figure className="figure" style={{width:"50rem"}}>
+                    <figure className="figure" style={{width:"500px"}}>
                         <img style={{height: '30%', boxShadow: "5px 5px 5px 5px #E2E2E2"}} 
                             src='/img/database_basic.png' 
                             className="figure-img img-fluid rounded" 
@@ -59,6 +79,7 @@ function Main_view(){
                     </div>
                 </div>
 
+                <hr></hr>
 
             </div>
         </>
