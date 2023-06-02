@@ -1,8 +1,10 @@
 import React from "react";
 
 import Navbar from "../components/navbar"
+import Badge from 'react-bootstrap/Badge';
 
 import './main.css'
+
 
 function Main_view(){
     return(
@@ -34,7 +36,7 @@ function Main_view(){
                             <p>
                             오늘 딱 DASP 자격증 취득을 끝내며, <br />
                             한국데이터산업진흥원에서 주관하는 자격증들 중 빅분기(빅데이터분석기사)를 제외한 자격증 취득을 완료했다! <br />
-                                ...
+                            <Badge className = "text-badge" bg="secondary">...</Badge>
                             </p>
                         </div>
                     </div>
@@ -58,7 +60,7 @@ function Main_view(){
                                 JOIN_2021은 2021년에 가입한 사람들(분모로 쓰려고 따로 뽑음)이구
                                 PURCHASE_2021은 2021년에 가입한 사람들 중 구매한 건을 뽑아서 고걸 이제 연, 월로 각각 정렬한 쿼리문이다. 
                                 요건 또 분자로 사용했다 ㅎ <br />
-                                ...
+                                <Badge className = "text-badge" bg="secondary">...</Badge>
                             </p>
                         </div>
                     </div>
@@ -80,7 +82,7 @@ function Main_view(){
                             데이터베이스 입장에서는 데이터를 변경하는 DML 실행 후 <br></br>
                             COMMIT으로 데이터베이스에 반영할 지 ROLLBACK으로 실행을 취소할 지 알 수 없음.
                             그렇기에 ROLLBACK으로 명령어 수행이 취소될 경우를 대비해 변경 전 데이터를 언두 세그먼트에 따로 저장 <br />
-                                ...
+                            <Badge className = "text-badge" bg="secondary">...</Badge>
                             </p>
                         </div>
                     </div>

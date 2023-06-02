@@ -1,3 +1,8 @@
+.text-badge{
+    margin-top: 10px;
+    color: #d8c6b5
+}
+
 @media screen and (max-width: 280px){
 
     #contents{

@@ -156,3 +156,42 @@
         margin-right: -360px !important;
       }
 }
+
+@media screen and (min-width: 542px) and (max-width: 984px){
+
+  #sql_title{
+      text-align: right;
+      width: 100%;
+  }
+
+  #sql_title_div{
+      text-align: right;
+      width: 100%;
+  }
+
+  #sql_button {
+      display: inline-block;
+      text-align: right;
+      margin-left: auto;
+      /* margin-right: 15px; */
+    }
+
+    #sql_index {
+      display: inline-block;
+      text-align: right;
+      width: 100%;
+      margin-left: auto !important;
+    }
+
+    #sql1 {
+      margin: 0 !important;
+    }
+
+    #sql2{
+      margin: 0 !important;
+    }
+
+    /* #responsive-navbar-nav{
+      margin-right: -360px !important;
+    } */
+}

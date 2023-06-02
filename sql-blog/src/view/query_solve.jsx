@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Navbar from "../components/navbar"
 
@@ -17,6 +17,11 @@ import './query_solve.css'
 function Query_solve(){
 
     const [key, setKey] = useState('one');
+    const navigate = useNavigate();
+
+    function janFirst(){
+        navigate('/jan-first')
+    }
 
     return(
         <>
@@ -46,7 +51,7 @@ function Query_solve(){
                             <Tab eventKey="one" title="1월">
                                 <Row>
                                     <Col>
-                                        <Button style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
+                                        <Button onClick = {janFirst} style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
                                             🌸 1월 1주차
                                         </Button>
                                     </Col>
