@@ -23,6 +23,15 @@ function Query_solve(){
         navigate('/jan-first')
     }
 
+    function janSecond(){
+        navigate('/jan-second')
+    }
+
+    function janThird(){
+        navigate('/jan-third')
+    }
+
+
     return(
         <>
             <div style = {{backgroundColor: 'rgb(58, 44, 26)', width:'100%', height: '3px'}} ></div>
@@ -56,7 +65,7 @@ function Query_solve(){
                                         </Button>
                                     </Col>
                                     <Col>
-                                        <Button style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
+                                        <Button onClick = {janSecond} style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
                                             🐥 1월 2주차
                                         </Button>
                                     </Col>
@@ -64,7 +73,7 @@ function Query_solve(){
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <Button style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
+                                        <Button onClick = {janThird} style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
                                             🎈 1월 3주차
                                         </Button>
                                     </Col>

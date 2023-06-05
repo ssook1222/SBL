@@ -22,7 +22,7 @@ function Main_view(){
                     SQL 관련 포스팅 중 추천하는 포스팅입니다.
                 </h5>
 
-                <a href="#" style={{textDecoration:"none", color:"black"}}>
+                <a href="/cert" style={{textDecoration:"none", color:"black"}}>
                     <div class = 'container' style={{display: "flex", alignItems: "center"}}>
                         <figure id ="top1" className="figure" style={{width:"300px"}}>
                             <img style={{height: '30%', boxShadow: "5px 5px 5px 5px #E2E2E2"}} 
@@ -44,7 +44,7 @@ function Main_view(){
 
                 <hr />
 
-                <a href="#" style={{textDecoration:"none", color:"black"}}>
+                <a href="/jan-third" style={{textDecoration:"none", color:"black"}}>
                     <div class = 'container' style={{display: "flex", alignItems: "center", marginBottom: '0'}}>
                         <figure id ="top2" className="figure" style={{width:"550px"}}>
                             <img style={{height: '30%', boxShadow: "5px 5px 5px 5px #E2E2E2"}} 
@@ -53,7 +53,7 @@ function Main_view(){
                                 alt="..." />
                         </figure>
                         <div class = 'sub-container' style={{marginLeft: "30px"}}>
-                            <h5>상품을 구매한 회원 비율 구하기 외 3건</h5>
+                            <h5>상품을 구매한 회원 비율 구하기 외 2건</h5>
                             <br></br>
                             <p>
                                 나는 인라인뷰 대신 WITH 절이랑 EXTRACT 써서 풀었다 <br />
@@ -67,7 +67,7 @@ function Main_view(){
                 </a>
                 <hr />
 
-                <a href="#" style={{textDecoration:"none", color:"black"}}>
+                <a href="/ch11" style={{textDecoration:"none", color:"black"}}>
                     <div class = 'container' style={{display: "flex", alignItems: "center"}}>
                         <figure id ="top3" className="figure" style={{width:"500px"}}>
                             <img style={{height: '30%', boxShadow: "5px 5px 5px 5px #E2E2E2"}} 

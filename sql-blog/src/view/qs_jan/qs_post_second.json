@@ -1,0 +1,19 @@
+{
+
+    "title" : "1월 2주차 문제 풀이 기록",
+    "date" : "23-01-11 ~ 23-01-13",
+    
+    "subTitle1" : "1. 식품분류별 가장 비싼 식품의 정보 조회하기",
+    "subTitle2" : "2. 취소되지 않은 예약 조회하기",
+    "subTitle3" : "3. 헤비 유저가 보유한 장소",
+    "subTitle4" : "4. 주문량이 많은 아이스크림을 조회하기",
+    "subTitle5" : "5. 저자 별 카테고리 매출액 집계하기",
+    "subTitle6" : "6. 조건에 맞는 도서 리스트 출력하기",
+
+    "code1" : "WITH A AS\n(\n\t    SELECT CATEGORY \n\t           , MAX(PRICE) AS PRICE\n\t    FROM FOOD_PRODUCT\n\t    GROUP BY CATEGORY \n\t    HAVING CATEGORY IN ('과자','국','김치','식용유')\n)\nSELECT A.CATEGORY, A.PRICE AS MAX_PRICE, B.PRODUCT_NAME\nFROM A INNER JOIN FOOD_PRODUCT B \nON A.CATEGORY=B.CATEGORY\nAND A.PRICE = B.PRICE\nORDER BY MAX_PRICE DESC",
+    "code2" : "SELECT A.APNT_NO\n\t, P.PT_NAME\n\t    , P.PT_NO\n\t    , D.MCDP_CD\n\t    , D.DR_NAME\n\t    , A.APNT_YMD\nFROM APPOINTMENT A INNER JOIN DOCTOR D ON A.MDDR_ID = D.DR_ID \n\t INNER JOIN PATIENT P ON A.PT_NO = P.PT_NO\nWHERE A.APNT_CNCL_YN = 'N' AND D.MCDP_CD = 'CS'\nAND TO_CHAR(APNT_YMD,'YYYY-MM-DD') LIKE '2022-04-13%'\nORDER BY A.APNT_YMD",
+    "code3" : "WITH HEAVY_USER AS\n(\n\tSELECT HOST_ID\n\tFROM PLACES\n\tGROUP BY HOST_ID\n\tHAVING COUNT(ID) > 1\n)\nSELECT ID, NAME, A.HOST_ID\nFROM PLACES A, HEAVY_USER \nWHERE A.HOST_ID = HEAVY_USER.HOST_ID\nORDER BY ID ASC",
+    "code4" : "SELECT DEPTNO\n\t   , TRUNC(AVG(SAL),0) AS AVG_SAL\n\t   , MAX(SAL) AS MAX_SAL\n\t   , MIN(SAL) AS MIN_SAL\n\t   , COUNT(*)AS CNT \nFROM EMP\nGROUP BY DEPTNO\nORDER BY DEPTNO DESC",
+    "code5" : "SELECT JOB\n\t   , COUNT(*)\nFROM EMP\nGROUP BY JOB \nHAVING COUNT(*) >= 3",
+    "code6" : "SELECT DEPTNO\n\t   , EXTRACT(YEAR FROM HIREDATE) AS HIRE_YEAR\n\t   , COUNT(*)AS CNT\n\t   , MAX(SAL) AS MAX_SAL\n\t    , MIN(SAL) AS MIN_SAL\n\t    , SUM(SAL) AS SUM_SAL\n\t    , AVG(SAL) AS AVG_SAL\nFROM EMP\nGROUP BY ROLLUP(DEPTNO, EXTRACT(YEAR FROM HIREDATE))"
+}
