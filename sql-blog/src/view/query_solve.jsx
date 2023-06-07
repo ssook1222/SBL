@@ -31,6 +31,14 @@ function Query_solve(){
         navigate('/jan-third')
     }
 
+    function janFourth(){
+        navigate('/jan-fourth')
+    }
+
+    function janFifth(){
+        navigate('/jan-fifth')
+    }
+
 
     return(
         <>
@@ -78,14 +86,14 @@ function Query_solve(){
                                         </Button>
                                     </Col>
                                     <Col>
-                                        <Button style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
+                                        <Button onClick = {janFourth} style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
                                             🤩 1월 4주차
                                         </Button>
                                     </Col>
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <Button style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
+                                        <Button onClick = {janFifth} style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
                                             🙃 1월 5주차
                                         </Button>
                                     </Col>

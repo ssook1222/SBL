@@ -1,0 +1,13 @@
+{
+
+    "title" : "1월 5주차 문제 풀이 기록",
+    "date" : "23-01-24 ~ 23-01-30",
+    
+    "subTitle1" : "1. 자동차 대여 기록에서 장기/단기 대여 구분하기",
+    "subTitle2" : "2. 즐겨찾기가 가장 많은 식당 정보 출력하기",
+    "subTitle3" : "3. 조건에 맞는 회원 수 구하기",
+
+    "code1" : "SELECT  HISTORY_ID\n\t, CAR_ID\n\t, TO_CHAR(START_DATE, 'YYYY-MM-DD')\n\t, TO_CHAR(END_DATE, 'YYYY-MM-DD')\n\t, CASE \n\t\t    WHEN END_DATE-START_DATE+1 >= 30 THEN '장기 대여'\n\t\t    WHEN END_DATE-START_DATE+1 < 30 THEN '단기 대여'\n\t END AS RENT_TYPE\nFROM    CAR_RENTAL_COMPANY_RENTAL_HISTORY\nWHERE   EXTRACT(MONTH FROM START_DATE) = 9\nORDER   BY HISTORY_ID DESC",
+    "code2" : "WITH A AS\n(\n\t    SELECT  FOOD_TYPE\n\t\t            , MAX(FAVORITES) AS FAVORITES\n\t    FROM    REST_INFO\n\t    GROUP BY    FOOD_TYPE\n)\nSELECT  B.FOOD_TYPE\n\t        , B.REST_ID\n\t        , B.REST_NAME\n\t        , B.FAVORITES\nFROM A, REST_INFO B\nWHERE A.FAVORITES = B.FAVORITES AND A.FOOD_TYPE = B.FOOD_TYPE\nORDER BY A.FOOD_TYPE DESC",
+    "code3" : "SELECT  COUNT(*) AS USERS\nFROM    USER_INFO\nWHERE   EXTRACT(YEAR FROM JOINED) = 2021 AND AGE BETWEEN 20 AND 29"
+}

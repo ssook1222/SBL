@@ -13,6 +13,9 @@ import Cert from './view/recommend/certfi.jsx'
 import JanFirst from './view/qs_jan/qs_post_first.jsx'
 import JanSecond from './view/qs_jan/qs_post_second.jsx'
 import JanThird from './view/qs_jan/qs_post_third.jsx'
+import JanFourth from './view/qs_jan/qs_post_fourth.jsx'
+import JanFifth from './view/qs_jan/qs_post_fifth.jsx'
+
 
 //db_basic 폼
 import Ch10 from './view/db_basic/ch10.jsx'
@@ -35,6 +38,8 @@ function App() {
           <Route exact path="/jan-first" element={<JanFirst />} > </Route>
           <Route exact path="/jan-second" element={<JanSecond />} > </Route>
           <Route exact path="/jan-third" element={<JanThird />} > </Route>
+          <Route exact path="/jan-fourth" element={<JanFourth />} > </Route>
+          <Route exact path="/jan-fifth" element={<JanFifth />} > </Route>
 
       </Routes>
     </BrowserRouter> 

@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
+
 import Navbar from "../components/navbar"
 
 import Button from 'react-bootstrap/Button';
@@ -8,6 +10,17 @@ import Col from 'react-bootstrap/Col';
 import Alert from 'react-bootstrap/Alert';
 
 function DB_basic(){
+
+    const navigate = useNavigate();
+
+    function ch10(){
+        navigate('/ch10')
+    }
+
+    function ch11(){
+        navigate('/ch11')
+    }
+
     return(
         <>
             <div style = {{backgroundColor: 'rgb(58, 44, 26)', width:'100%', height: '3px'}} ></div>
@@ -36,7 +49,7 @@ function DB_basic(){
                                 <Button variant="outline-secondary">😊 4장</Button>
                             </Col>
                             <Col>
-                                <Button variant="outline-secondary">😉 11장</Button>
+                                <Button onClick = {ch11} variant="outline-secondary">😉 11장</Button>
                             </Col>
                         </Row>
                 </Container>
@@ -61,33 +74,24 @@ function DB_basic(){
                                     <Button variant="outline-secondary">🫥 9장</Button>
                                 </Col>
                                 <Col>
-                                    <Button variant="outline-secondary">😔 10장</Button>
+                                    <Button onClick = {ch10} variant="outline-secondary">😔 10장</Button>
                                 </Col>
                                 <Col>
-                                    <Button variant="outline-secondary">😚 11장</Button>
+                                    <Button variant="outline-secondary">🤭 12장</Button>
                                 </Col>
                         </Row>
 
                         <Row style={{marginTop:"20px"}}>
-                                <Col>
-                                    <Button variant="outline-secondary">🤭 12장</Button>
-                                </Col>
                                 <Col>
                                     <Button variant="outline-secondary">🤔 13장</Button>
                                 </Col>
                                 <Col>
                                     <Button variant="outline-secondary">😂 14장</Button>
                                 </Col>
-                        </Row>
-
-                        <Row style={{marginTop:"20px"}}>
                                 <Col>
                                     <Button variant="outline-secondary">😇 15장</Button>
                                 </Col>
-                                <Col></Col>
-                                <Col></Col>
                         </Row>
-
                 </Container>
                     <hr></hr>
             </div>

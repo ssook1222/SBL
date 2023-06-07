@@ -38,6 +38,10 @@
         margin: 0 !important;
       }
 
+      #sql3{
+        margin: 0 !important;
+      }
+
       #responsive-navbar-nav{
         margin-right: -100px !important;
       }
@@ -73,6 +77,10 @@
       }
 
       #sql2{
+        margin: 0 !important;
+      }
+
+      #sql3{
         margin: 0 !important;
       }
 
@@ -114,8 +122,12 @@
         margin: 0 !important;
       }
 
+      #sql3{
+        margin: 0 !important;
+      }
+
       #responsive-navbar-nav{
-        margin-right: -230px !important;
+        margin-right: -200px !important;
       }
 }
 
@@ -149,6 +161,10 @@
       }
 
       #sql2{
+        margin: 0 !important;
+      }
+
+      #sql3{
         margin: 0 !important;
       }
 
@@ -188,6 +204,10 @@
     }
 
     #sql2{
+      margin: 0 !important;
+    }
+
+    #sql3{
       margin: 0 !important;
     }
 
