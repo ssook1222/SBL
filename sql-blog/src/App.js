@@ -16,8 +16,11 @@ import JanThird from './view/qs_jan/qs_post_third.jsx'
 import JanFourth from './view/qs_jan/qs_post_fourth.jsx'
 import JanFifth from './view/qs_jan/qs_post_fifth.jsx'
 
+import FabThird from './view/qs_fab/qs_post_third.jsx'
 
 //db_basic 폼
+import Ch3 from './view/db_basic/ch3.jsx'
+import Ch4 from './view/db_basic/ch4.jsx'
 import Ch10 from './view/db_basic/ch10.jsx'
 import Ch11 from './view/db_basic/ch11.jsx'
 
@@ -32,6 +35,8 @@ function App() {
 
           <Route exact path="/cert" element={<Cert />} > </Route>
 
+          <Route exact path="/ch3" element={<Ch3 />} > </Route>
+          <Route exact path="/ch4" element={<Ch4 />} > </Route>
           <Route exact path="/ch10" element={<Ch10 />} > </Route>
           <Route exact path="/ch11" element={<Ch11 />} > </Route>
 
@@ -40,6 +45,8 @@ function App() {
           <Route exact path="/jan-third" element={<JanThird />} > </Route>
           <Route exact path="/jan-fourth" element={<JanFourth />} > </Route>
           <Route exact path="/jan-fifth" element={<JanFifth />} > </Route>
+
+          <Route exact path="/fab-third" element={<FabThird />} > </Route>
 
       </Routes>
     </BrowserRouter> 

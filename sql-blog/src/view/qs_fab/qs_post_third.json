@@ -1,0 +1,15 @@
+{
+
+    "title" : "2월 3주차 문제 풀이 기록",
+    "date" : "23-02-16",
+    
+    "subTitle1" : "1. 특정 옵션이 포함된 자동차 리스트 구하기",
+    "subTitle2" : "2. 조건별로 분류하여 주문상태 출력하기",
+    "subTitle3" : "3. 흉부외과 또는 일반외과 의사 목록 출력하기",
+    "subTitle4" : "4. 오랜기간 보호한 동물(2)",
+
+    "code1" : "SELECT  CAR_ID\r\n        , CAR_TYPE\t\r\n        , DAILY_FEE\r\n        , OPTIONS\r\nFROM    CAR_RENTAL_COMPANY_CAR\r\nWHERE   OPTIONS LIKE '%\uB124\uBE44\uAC8C\uC774\uC158%'\r\nORDER BY    CAR_ID DESC",
+    "code2" : "SELECT  ORDER_ID\t\r\n        , PRODUCT_ID\t\r\n        , TO_CHAR(OUT_DATE, 'YYYY-MM-DD') AS OUT_DATE\r\n        , CASE WHEN TO_CHAR(OUT_DATE, 'YYYY-MM-DD') > '2022-05-01' THEN '\uCD9C\uACE0\uB300\uAE30'\r\n               WHEN TO_CHAR(OUT_DATE, 'YYYY-MM-DD') <= '2022-05-01' THEN '\uCD9C\uACE0\uC644\uB8CC'\r\n               ELSE '\uCD9C\uACE0\uBBF8\uC815'\r\n          END AS \uCD9C\uACE0\uC5EC\uBD80\r\nFROM    FOOD_ORDER  \r\nORDER BY    ORDER_ID ASC",
+    "code3" : "SELECT  DR_NAME \r\n        , DR_ID\t\r\n        , MCDP_CD\t\r\n        , TO_CHAR(HIRE_YMD, 'YYYY-MM-DD') AS HIRE_YMD\r\nFROM     DOCTOR\r\nWHERE   MCDP_CD = 'CS' OR MCDP_CD = 'GS'\r\nORDER BY    HIRE_YMD DESC, DR_NAME ASC",
+    "code4" : "WITH C AS (\r\nSELECT      B.ANIMAL_ID   \r\n            , B.NAME\r\n            , B.DATETIME\r\n            , B.DATETIME - A.DATETIME\r\n\r\nFROM         (\r\n                SELECT      ANIMAL_ID\r\n                            , NAME\r\n                            , DATETIME\r\n                FROM        ANIMAL_INS\r\n             ) A\r\n             , ANIMAL_OUTS B\r\nWHERE       A.ANIMAL_ID = B.ANIMAL_ID\r\nORDER BY    B.DATETIME - A.DATETIME DESC\r\n)\r\n\r\nSELECT      ANIMAL_ID\r\n            , NAME\r\nFROM C\r\nFETCH NEXT 2 ROWS ONLY"
+}

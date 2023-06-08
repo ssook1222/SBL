@@ -13,6 +13,14 @@ function DB_basic(){
 
     const navigate = useNavigate();
 
+    function ch3(){
+        navigate('/ch3')
+    }
+
+    function ch4(){
+        navigate('/ch4')
+    }
+
     function ch10(){
         navigate('/ch10')
     }
@@ -43,10 +51,10 @@ function DB_basic(){
                     <hr></hr>
                         <Row>
                             <Col>
-                                <Button variant="outline-secondary">😌 3장</Button>
+                                <Button onClick = {ch3} variant="outline-secondary">😌 3장</Button>
                             </Col>
                             <Col>
-                                <Button variant="outline-secondary">😊 4장</Button>
+                                <Button onClick = {ch4} variant="outline-secondary">😊 4장</Button>
                             </Col>
                             <Col>
                                 <Button onClick = {ch11} variant="outline-secondary">😉 11장</Button>
