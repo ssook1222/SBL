@@ -1,0 +1,19 @@
+{
+
+    "title" : "3월 4주차 문제 풀이 기록",
+    "date" : "23-03-20 ~ 23-03-22",
+    
+    "subTitle1" : "1. 조건에 맞는 사용자 정보 출력하기",
+    "subTitle2" : "2. 자동차 대여 기록에서 대여 중 / 대여 가능 여부 구분하기",
+    "subTitle3" : "3. 조건에 부합하는 중고 거래 댓글 조회하기",
+    "subTitle4" : "4. 경기도에 위치한 식품창고 목록 출력하기",
+    "subTitle5" : "5. 조회수가 가장 많은 중고 거래 게시판의 첨부 파일 조회하기",
+    "subTitle6" : "6. 이름에 el이 들어가는 동물 찾기",
+
+    "code1" : "WITH UB AS (\r\n    SELECT WRITER_ID\r\n    FROM USED_GOODS_BOARD\r\n    GROUP BY WRITER_ID\r\n    HAVING COUNT(*) >= 3\r\n)\r\n\r\nSELECT  USER_ID\r\n        , NICKNAME\r\n        , CONCAT(CONCAT(CONCAT(CONCAT(CITY, ' '), STREET_ADDRESS1),' '), STREET_ADDRESS2) AS \uC804\uCCB4\uC8FC\uC18C\r\n        , SUBSTR(TLNO,1,3) || '-' || SUBSTR(TLNO,4,4) || '-' || SUBSTR(TLNO, 8) AS \uC804\uD654\uBC88\uD638\r\n\r\nFROM    USED_GOODS_USER UG INNER JOIN UB\r\nON UG.USER_ID = UB.WRITER_ID\r\nORDER BY USER_ID DESC",
+    "code2" : "WITH TEST AS(\r\nSELECT  CAR_ID\r\nFROM    CAR_RENTAL_COMPANY_RENTAL_HISTORY\r\nWHERE   TO_DATE('2022-10-16', 'YYYY-MM-DD') BETWEEN START_DATE AND END_DATE\r\n)    \r\nSELECT  DISTINCT C.CAR_ID,\r\n        CASE WHEN TEST.CAR_ID IS NULL THEN '\uB300\uC5EC \uAC00\uB2A5'\r\n             WHEN TEST.CAR_ID IS NOT NULL THEN '\uB300\uC5EC\uC911'\r\n             END AS AVAILABILITY\r\nFROM    CAR_RENTAL_COMPANY_RENTAL_HISTORY C LEFT OUTER JOIN TEST \r\n        ON C.CAR_ID = TEST.CAR_ID\r\n\r\nORDER BY CAR_ID DESC",
+    "code3" : "SELECT  UB.TITLE, \r\n        UB.BOARD_ID,\r\n        UR.REPLY_ID,\r\n        UR.WRITER_ID,\r\n        UR.CONTENTS,\r\n        TO_CHAR(UR.CREATED_DATE, 'YYYY-MM-DD') AS CREATED_DATE\r\n\r\nFROM    USED_GOODS_BOARD UB INNER JOIN\r\n        USED_GOODS_REPLY UR\r\n        ON UB.BOARD_ID = UR.BOARD_ID\r\n\r\nWHERE   EXTRACT(MONTH FROM UB.CREATED_DATE) = 10\r\n        AND\r\n        EXTRACT(YEAR FROM UB.CREATED_DATE) = 2022\r\n\r\nORDER BY    UR.CREATED_DATE, UB.TITLE",
+    "code4" : "SELECT  WAREHOUSE_ID,\r\n        WAREHOUSE_NAME,\r\n        ADDRESS,\r\n        CASE WHEN FREEZER_YN IS NULL THEN 'N'\r\n             WHEN FREEZER_YN IS NOT NULL THEN FREEZER_YN\r\n             END AS FREEZER_YN\r\n             \r\nFROM    FOOD_WAREHOUSE\r\nWHERE   ADDRESS LIKE '\uACBD\uAE30\uB3C4%'\r\nORDER BY    WAREHOUSE_ID",
+    "code5" : "SELECT      '\/home\/grep\/src\/'|| UB.BOARD_ID || '\/' || FILE_ID || FILE_NAME || FILE_EXT AS FILE_PATH\r\nFROM        USED_GOODS_FILE UF INNER JOIN USED_GOODS_BOARD UB \r\nON          UF.BOARD_ID = UB.BOARD_ID\r\nWHERE       VIEWS IN (\r\n    SELECT  MAX(VIEWS)\r\n    FROM    USED_GOODS_BOARD\r\n)\r\nORDER BY    FILE_ID DESC",
+    "code6" : "SELECT  ANIMAL_ID,\r\n        NAME\r\nFROM    ANIMAL_INS\r\nWHERE   LOWER(NAME) LIKE '%el%' \r\n        AND ANIMAL_TYPE = 'Dog'\r\nORDER BY    NAME"
+}

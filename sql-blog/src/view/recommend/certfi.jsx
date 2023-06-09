@@ -1,6 +1,9 @@
 import React from "react";
 import Navbar from "../../components/navbar"
 
+import Image from 'react-bootstrap/Image';
+import Col from 'react-bootstrap/Col';
+
 function Certficate_post(){
     return(
         <>
@@ -19,7 +22,11 @@ function Certficate_post(){
                         marginBottom:"2%"
                         }}>
                         오늘 딱 DASP 자격증 취득을 끝내며, 한국데이터산업진흥원에서 주관하는 자격증들 중 빅분기(빅데이터분석기사)를 제외한 자격증 취득을 완료했다! <br></br>
-                        <img src="https://velog.velcdn.com/images/ssook1222/post/7d51b886-d768-42db-a3ae-386c3c119065/image.png"></img>
+                        
+                            <img 
+                                style={{width:"100%", display:"inline-block", margin:"auto"}}
+                                src="https://velog.velcdn.com/images/ssook1222/post/7d51b886-d768-42db-a3ae-386c3c119065/image.png"></img>
+                        
 
                         <br></br><br></br>
                         <h5>자격증, 취업할 때 도움이 되나요?</h5>

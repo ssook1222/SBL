@@ -18,6 +18,8 @@ import JanFifth from './view/qs_jan/qs_post_fifth.jsx'
 
 import FabThird from './view/qs_fab/qs_post_third.jsx'
 
+import MarchFirst from './view/qs_march/qs_post_first.jsx'
+
 //db_basic 폼
 import Ch3 from './view/db_basic/ch3.jsx'
 import Ch4 from './view/db_basic/ch4.jsx'
@@ -47,6 +49,8 @@ function App() {
           <Route exact path="/jan-fifth" element={<JanFifth />} > </Route>
 
           <Route exact path="/fab-third" element={<FabThird />} > </Route>
+
+          <Route exact path="/march-first" element={<MarchFirst />} > </Route>
 
       </Routes>
     </BrowserRouter> 

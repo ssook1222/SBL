@@ -38,10 +38,13 @@ function Query_solve(){
     function janFifth(){
         navigate('/jan-fifth')
     }
-
     
     function fabThird(){
         navigate('/fab-third')
+    }
+
+    function marchFirst(){
+        navigate('/march-first')
     }
 
 
@@ -112,7 +115,7 @@ function Query_solve(){
                                 </Button>
                             </Tab>
                             <Tab eventKey="three" title="3월">
-                                <Button style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
+                                <Button onClick = {marchFirst} style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
                                     😖 3월 4주차
                                 </Button>
                             </Tab>
