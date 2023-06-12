@@ -47,6 +47,15 @@ function Query_solve(){
         navigate('/march-first')
     }
 
+    function aprilFirst(){
+        navigate('/april-first')
+    }
+
+    function aprilThird(){
+        navigate('/april-third')
+    }
+
+
 
     return(
         <>
@@ -122,12 +131,12 @@ function Query_solve(){
                             <Tab eventKey="four" title="4월">
                                 <Row>
                                     <Col>
-                                        <Button style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
+                                        <Button onClick = {aprilFirst} style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
                                             🎀 4월 3주차
                                         </Button>
                                     </Col>
                                     <Col>
-                                        <Button style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
+                                        <Button onClick = {aprilThird} style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
                                             🕶️ 4월 4주차
                                         </Button>
                                     </Col>

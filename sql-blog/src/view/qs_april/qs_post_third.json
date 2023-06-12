@@ -1,0 +1,25 @@
+{
+
+    "title" : "4월 4주차 문제 풀이 기록",
+    "date" : "23-04-24 ~ 04-27",
+    
+    "subTitle1" : "1. DATETIME에서 DATE로 형 변환",
+    "subTitle2" : "2. 진료과별 총 예약 횟수 구하기",
+    "subTitle3" : "3. 입양 시각 구하기",
+    "subTitle4" : "4. 조건에 맞는 도서와 저자 리스트 출력하기",
+    "subTitle5" : "5. 년, 월, 성별 별 상품 구매 회원 수 구하기",
+    "subTitle6" : "6. 루시와 엘라 찾기",
+    "subTitle7" : "7. 자동차 종류 별 특정 옵션이 포함된 자동차 수 구하기",
+    "subTitle8" : "8. 중성화 여부 파악하기",
+    "subTitle9" : "9. 카테고리 별 상품 개수 구하기",
+
+    "code1" : "SELECT  ANIMAL_ID,\r\n        NAME,\r\n        TO_CHAR(DATETIME, 'YYYY-MM-DD') AS \"\uB0A0\uC9DC\"\r\nFROM    ANIMAL_INS\r\nORDER BY    ANIMAL_ID",
+    "code2" : "SELECT      MCDP_CD AS \"\uC9C4\uB8CC\uACFC \uCF54\uB4DC\"\r\n            , COUNT(*) AS \"5\uC6D4\uC608\uC57D\uAC74\uC218\"\r\nFROM        APPOINTMENT\r\nWHERE       TO_CHAR(APNT_YMD, 'YYYY-MM-DD') LIKE '2022-05%'\r\nGROUP BY    MCDP_CD\r\nORDER BY    COUNT(*), MCDP_CD",
+    "code3" : "WITH TIME AS(\r\nSELECT  TO_CHAR(datetime,'fmHH24') AS HOUR\r\n        , COUNT(*) AS COUNT\r\nFROM    ANIMAL_OUTS\r\nGROUP BY    TO_CHAR(datetime,'fmHH24')\r\n\r\nUNION ALL\r\n\r\nSELECT  TO_CHAR(LEVEL - 1) AS HOUR\r\n        , COUNT(*)-1 AS COUNT\r\nFROM    DUAL\r\nCONNECT BY LEVEL < 25\r\nGROUP BY LEVEL - 1\r\n)\r\nSELECT      TO_NUMBER(HOUR) AS HOUR\r\n            , SUM(COUNT) AS COUNT\r\nFROM        TIME\r\nGROUP BY    HOUR\r\nORDER BY    HOUR",
+    "code4" : "SELECT  B.BOOK_ID,\r\n        A.AUTHOR_NAME,\r\n        TO_CHAR(B.PUBLISHED_DATE, 'YYYY-MM-DD') AS PUBLISHED_DATE\r\nFROM    BOOK B INNER JOIN AUTHOR A ON B.AUTHOR_ID = A.AUTHOR_ID\r\nWHERE   B.CATEGORY = '\uACBD\uC81C'\r\nORDER BY    B.PUBLISHED_DATE",
+    "code5" : "WITH A AS (\r\n    SELECT      EXTRACT(YEAR FROM SALES_DATE) AS YEAR, \r\n                EXTRACT(MONTH FROM SALES_DATE) AS MONTH,\r\n                USER_ID\r\n    FROM        ONLINE_SALE\r\n)\r\n\r\nSELECT          YEAR,\r\n                MONTH,\r\n                GENDER,\r\n                COUNT(DISTINCT A.USER_ID) AS USERS\r\n                \r\nFROM            A INNER JOIN USER_INFO B ON A.USER_ID = B.USER_ID\r\nWHERE           B.GENDER IS NOT NULL\r\nGROUP BY        YEAR, MONTH, GENDER\r\nORDER BY        YEAR, MONTH, GENDER",
+    "code6" : "SELECT      ANIMAL_ID\t\r\n            , NAME\r\n            , SEX_UPON_INTAKE\r\nFROM        ANIMAL_INS\r\nWHERE       NAME = 'Lucy' OR NAME = 'Ella' OR NAME = 'Pickle' OR NAME = 'Rogan' OR NAME = 'Sabrina' OR NAME = 'Mitty'\r\nORDER BY    ANIMAL_ID ASC\r\nSELECT      SUBSTR(PRODUCT_CODE,1,2) AS CATEGORY\r\n            , COUNT(*) AS PRODUCTS\r\nFROM        PRODUCT\r\nGROUP BY    SUBSTR(PRODUCT_CODE,1,2) \r\nORDER BY    SUBSTR(PRODUCT_CODE,1,2)",
+    "code7" : "SELECT      CAR_TYPE\r\n            , COUNT(*) AS CARS\r\nFROM        CAR_RENTAL_COMPANY_CAR\r\nWHERE       OPTIONS LIKE '%\uD1B5\uD48D\uC2DC\uD2B8%' OR OPTIONS LIKE '%\uC5F4\uC120\uC2DC\uD2B8%' OR OPTIONS LIKE '%\uAC00\uC8FD\uC2DC\uD2B8%'\r\nGROUP BY    CAR_TYPE\r\nORDER BY    CAR_TYPE",
+    "code8" : "SELECT  ANIMAL_ID\t\r\n        , NAME\r\n        , CASE WHEN SEX_UPON_INTAKE LIKE '%Neutered%' THEN 'O'\r\n               WHEN SEX_UPON_INTAKE LIKE '%Spayed%' THEN 'O' \r\n               ELSE 'X' END AS '\uC911\uC131\uD654'\r\nFROM    ANIMAL_INS\r\nORDER BY   ANIMAL_ID",
+    "code9" : "SELECT      SUBSTR(PRODUCT_CODE,1,2) AS CATEGORY\r\n            , COUNT(*) AS PRODUCTS\r\nFROM        PRODUCT\r\nGROUP BY    SUBSTR(PRODUCT_CODE,1,2) \r\nORDER BY    SUBSTR(PRODUCT_CODE,1,2)"
+}

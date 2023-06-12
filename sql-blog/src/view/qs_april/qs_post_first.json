@@ -1,0 +1,19 @@
+{
+
+    "title" : "4월 3주차 문제 풀이 기록",
+    "date" : "23-04-20 ~ 04-21",
+    
+    "subTitle1" : "1. 조건에 맞는 사용자와 총 거래 금액 조회하기",
+    "subTitle2" : "2. 대여기록이 존재하는 자동차 리스트 구하기",
+    "subTitle3" : "3. 가격대 별 상품 개수 구하기",
+    "subTitle4" : "4. 고양이와 개는 몇 마리 있을까",
+    "subTitle5" : "5. 조건에 부합하는 중고 거래 상태 조회하기",
+    "subTitle6" : "6. 입양 시각 구하기",
+
+    "code1" : "SELECT  USER_ID\t\r\n        , NICKNAME\t\r\n        , SUM(B.PRICE) TOTAL_SALES\r\nFROM    USED_GOODS_USER A INNER JOIN USED_GOODS_BOARD B\r\nON      B.WRITER_ID = A.USER_ID\r\nWHERE   B.STATUS = 'DONE'\r\nGROUP BY  NICKNAME, USER_ID\r\nHAVING    SUM(B.PRICE) >= 700000\r\nORDER BY   TOTAL_SALES ASC",
+    "code2" : "WITH LIST AS ( \r\n    SELECT  CAR_ID\r\n    FROM    CAR_RENTAL_COMPANY_RENTAL_HISTORY\r\n    WHERE   EXTRACT(MONTH FROM START_DATE) = 10 \r\n)\r\nSELECT  A.CAR_ID\r\nFROM    CAR_RENTAL_COMPANY_CAR A INNER JOIN LIST B\r\nON      A.CAR_ID = B.CAR_ID\r\nWHERE   A.CAR_TYPE = '\uC138\uB2E8'\r\nGROUP BY A.CAR_ID\r\nORDER BY A.CAR_ID DESC",
+    "code3" : "WITH BAD AS (\r\n\r\n    SELECT SUBSTR(PRICE,0,1) PRICE_GROUP\r\n    FROM PRODUCT\r\n) \r\nSELECT\r\n    BAD.PRICE_GROUP * 10000 PRICE_GROUP,\r\n    COUNT(BAD.PRICE_GROUP) PRODUCTS\r\nFROM    BAD\r\nGROUP BY    BAD.PRICE_GROUP\r\nORDER BY    BAD.PRICE_GROUP",
+    "code4" : "SELECT      ANIMAL_TYPE\r\n            , COUNT(*) AS COUNT\r\nFROM        ANIMAL_INS\r\nGROUP BY    ANIMAL_TYPE\r\nORDER BY    ANIMAL_TYPE",
+    "code5" : "SELECT      BOARD_ID\t\r\n            , WRITER_ID\t\r\n            , TITLE\t\r\n            , PRICE\t\r\n            , CASE WHEN STATUS = 'SALE' THEN '\uD310\uB9E4\uC911'\r\n                   WHEN STATUS = 'RESERVED' THEN '\uC608\uC57D\uC911'\r\n                   WHEN STATUS = 'DONE' THEN '\uAC70\uB798\uC644\uB8CC' \r\n                   END AS STATUS\r\nFROM         USED_GOODS_BOARD\r\nWHERE       TO_CHAR(CREATED_DATE, 'YYYY-MM-DD') = '2022-10-05'\r\nORDER BY    BOARD_ID DESC",
+    "code6" : "SELECT  TO_NUMBER(TO_CHAR(DATETIME,'HH24')) AS HOUR\r\n        , COUNT(*) AS COUNT\r\nFROM    ANIMAL_OUTS\r\nWHERE   TO_NUMBER(TO_CHAR(DATETIME,'HH24')) BETWEEN 9 AND 19\r\nGROUP BY    TO_NUMBER(TO_CHAR(DATETIME,'HH24'))\r\nORDER BY    HOUR"
+}
