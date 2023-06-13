@@ -55,6 +55,10 @@ function Query_solve(){
         navigate('/april-third')
     }
 
+    function mayFirst(){
+        navigate('/may-first')
+    }
+
 
 
     return(
@@ -143,7 +147,7 @@ function Query_solve(){
                                 </Row>
                             </Tab>
                             <Tab eventKey="five" title="5월">
-                                <Button style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
+                                <Button onClick = {mayFirst} style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
                                     🤓 5월 4주차
                                 </Button>
                             </Tab>

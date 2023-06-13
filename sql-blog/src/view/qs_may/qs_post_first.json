@@ -1,0 +1,19 @@
+{
+
+    "title" : "5월 4주차 문제 풀이 기록",
+    "date" : "23-05-19 ~ 23-05-21",
+    
+    "subTitle1" : "1. Game Play Analysis I",
+    "subTitle2" : "2. Recyclable and Low Fat Products",
+    "subTitle3" : "3. Replace Employee ID With The Unique Identifier",
+    "subTitle4" : "4. 자동차 평균 대여 기간 구하기",
+    "subTitle5" : "5. 성분으로 구분한 아이스크림 총 주문량",
+    "subTitle6" : "6. Combine Two tables",
+
+    "code1" : "SELECT  PLAYER_ID\r\n        , TO_CHAR(EVENT_DATE, 'YYYY-MM-DD') AS FIRST_LOGIN\r\n\r\nFROM    ACTIVITY A\r\nWHERE   EVENT_DATE = (\r\n    SELECT  MIN(EVENT_DATE)\r\n    FROM    ACTIVITY B\r\n    WHERE   B.PLAYER_ID = A.PLAYER_ID\r\n)",
+    "code2" : "SELECT  PRODUCT_ID\r\nFROM    PRODUCTS\r\nWHERE   LOW_FATS = 'Y' AND RECYCLABLE = 'Y'",
+    "code3" : "SELECT  UNIQUE_ID\r\n        , NAME\r\n\r\nFROM    Employees A LEFT OUTER JOIN EmployeeUNI B\r\nON      A.ID = B.ID\r\nORDER BY    NAME",
+    "code4" : "SELECT      CAR_ID\r\n            , ROUND(AVG(TO_DATE(END_DATE) - TO_DATE(START_DATE) + 1),1) AS AVERAGE_DURATION\r\nFROM        CAR_RENTAL_COMPANY_RENTAL_HISTORY\r\nGROUP BY    CAR_ID\r\nHAVING      ROUND(AVG(TO_DATE(END_DATE) - TO_DATE(START_DATE) + 1),1) >= 7\r\nORDER BY    ROUND(AVG(TO_DATE(END_DATE) - TO_DATE(START_DATE) + 1),1) DESC, CAR_ID DESC",
+    "code5" : "WITH A AS (\r\n    SELECT      B.FLAVOR\r\n                , INGREDIENT_TYPE\r\n                , TOTAL_ORDER\r\n    FROM        FIRST_HALF B INNER JOIN ICECREAM_INFO C \r\n    ON          B.FLAVOR = C.FLAVOR\r\n)\r\n\r\nSELECT      INGREDIENT_TYPE\r\n            , SUM(TOTAL_ORDER) AS TOTAL_ORDER\r\nFROM        A\r\nGROUP BY    INGREDIENT_TYPE",
+    "code6" : "SELECT  FIRSTNAME\r\n        , LASTNAME\r\n        , CITY\r\n        , STATE\r\n\r\nFROM PERSON A LEFT OUTER JOIN ADDRESS B ON A.PERSONID = B.PERSONID"
+}

@@ -23,6 +23,8 @@ import MarchFirst from './view/qs_march/qs_post_first.jsx'
 import AprilFirst from './view/qs_april/qs_post_first.jsx'
 import AprilThird from './view/qs_april/qs_post_third.jsx'
 
+import MayFirst from './view/qs_may/qs_post_first.jsx'
+
 //db_basic 폼
 import Ch3 from './view/db_basic/ch3.jsx'
 import Ch4 from './view/db_basic/ch4.jsx'
@@ -57,6 +59,8 @@ function App() {
 
           <Route exact path="/april-first" element={<AprilFirst />} > </Route>
           <Route exact path="/april-third" element={<AprilThird />} > </Route>
+
+          <Route exact path="/may-first" element={<MayFirst />} > </Route>
 
       </Routes>
     </BrowserRouter> 
