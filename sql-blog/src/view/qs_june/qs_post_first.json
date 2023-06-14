@@ -1,0 +1,19 @@
+{
+
+    "title" : "6월 1주차 문제 풀이 기록",
+    "date" : "23-06-01 ~ 23-06-04",
+    
+    "subTitle1" : "1. Weather Observation Station 5",
+    "subTitle2" : "2. Weather Observation Station 8",
+    "subTitle3" : "3. Weather Observation Station 9",
+    "subTitle4" : "4. Weather Observation Station 11",
+    "subTitle5" : "5. Weather Observation Station 12",
+    "subTitle6" : "6. Higher Than 75 Marks",
+
+    "code1" : "SELECT CITY, LENGTH(CITY) AS NAME_LENGTH\r\nFROM STATION\r\nORDER BY NAME_LENGTH ASC, CITY ASC\r\nLIMIT 1;\r\n\r\nSELECT CITY, LENGTH(CITY) AS NAME_LENGTH\r\nFROM STATION\r\nORDER BY NAME_LENGTH DESC, CITY ASC\r\nLIMIT 1;",
+    "code2" : "SELECT DISTINCT CITY\r\nFROM STATION\r\nWHERE (CITY LIKE 'A%' OR CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%' OR\r\n      CITY LIKE 'a%' OR CITY LIKE 'e%' OR CITY LIKE 'i%' OR CITY LIKE 'o%' OR CITY LIKE 'u%') AND (CITY LIKE '%A' OR CITY LIKE '%E' OR CITY LIKE '%I' OR CITY LIKE '%O' OR CITY LIKE '%U' OR\r\n      CITY LIKE '%a' OR CITY LIKE '%e' OR CITY LIKE '%i' OR CITY LIKE '%o' OR CITY LIKE '%u');",
+    "code3" : "SELECT DISTINCT CITY\r\nFROM STATION\r\nWHERE NOT (CITY LIKE 'A%' OR CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%' OR\r\n      CITY LIKE 'a%' OR CITY LIKE 'e%' OR CITY LIKE 'i%' OR CITY LIKE 'o%' OR CITY LIKE 'u%');",
+    "code4" : "SELECT DISTINCT CITY\r\nFROM STATION\r\nWHERE NOT ((CITY LIKE 'A%' OR CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%' OR\r\n      CITY LIKE 'a%' OR CITY LIKE 'e%' OR CITY LIKE 'i%' OR CITY LIKE 'o%' OR CITY LIKE 'u%') AND (CITY LIKE '%A' OR CITY LIKE '%E' OR CITY LIKE '%I' OR CITY LIKE '%O' OR CITY LIKE '%U' OR\r\n      CITY LIKE '%a' OR CITY LIKE '%e' OR CITY LIKE '%i' OR CITY LIKE '%o' OR CITY LIKE '%u'));",
+    "code5" : "SELECT DISTINCT CITY\r\nFROM STATION\r\nWHERE NOT ((CITY LIKE 'A%' OR CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%' OR\r\n      CITY LIKE 'a%' OR CITY LIKE 'e%' OR CITY LIKE 'i%' OR CITY LIKE 'o%' OR CITY LIKE 'u%') OR (CITY LIKE '%A' OR CITY LIKE '%E' OR CITY LIKE '%I' OR CITY LIKE '%O' OR CITY LIKE '%U' OR\r\n      CITY LIKE '%a' OR CITY LIKE '%e' OR CITY LIKE '%i' OR CITY LIKE '%o' OR CITY LIKE '%u'));",
+    "code6" : "SELECT  name\r\nFROM    students\r\nWHERE   marks > 75\r\nORDER BY RIGHT(name, 3), id;"
+}

@@ -59,6 +59,9 @@ function Query_solve(){
         navigate('/may-first')
     }
 
+    function juneFirst(){
+        navigate('/june-first')
+    }
 
 
     return(
@@ -152,9 +155,19 @@ function Query_solve(){
                                 </Button>
                             </Tab>
                             <Tab eventKey="six" title="6월">
-                                <Button style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
-                                    🐈‍⬛ 6월 1주차
-                                </Button>
+                                <Row>
+                                    <Col>
+                                    <Button onClick = {juneFirst} style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
+                                        🐈‍⬛ 6월 1주차
+                                    </Button>
+                                    </Col>
+
+                                    <Col>
+                                    <Button style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
+                                        🎆 6월 2주차
+                                    </Button>
+                                    </Col>
+                                </Row>
                             </Tab>
                         </Tabs>
                 </Container>
