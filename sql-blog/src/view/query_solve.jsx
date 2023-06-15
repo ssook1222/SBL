@@ -63,6 +63,9 @@ function Query_solve(){
         navigate('/june-first')
     }
 
+    function juneSecond(){
+        navigate('/june-second')
+    }
 
     return(
         <>
@@ -163,7 +166,7 @@ function Query_solve(){
                                     </Col>
 
                                     <Col>
-                                    <Button style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
+                                    <Button onClick = {juneSecond} tyle ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
                                         🎆 6월 2주차
                                     </Button>
                                     </Col>
