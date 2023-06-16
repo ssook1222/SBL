@@ -1,0 +1,17 @@
+{
+
+    "title" : "7장",
+    "date" : "23-01-16",
+    
+    "subTitle1" : "1",
+    "subTitle2" : "2",
+    "subTitle3" : "3",
+    "subTitle4" : "4",
+    "subTitle5" : "5",
+
+    "code1" : "SELECT DEPTNO\r\n       , TRUNC(AVG(SAL),0) AS VG_SAL\r\n       , MAX(SAL) AS MAX_SAL\r\n       , MIN(SAL) AS MIN_SAL\r\n       , COUNT(*)AS CNT \r\nFROM EMP\r\nGROUP BY DEPTNO\r\nORDER BY DEPTNO DESC",
+    "code2" : "SELECT JOB\r\n       , COUNT(*)\r\nFROM EMP\r\nGROUP BY JOB\r\nHAVING COUNT(*) >= 3",
+    "code3" : "SELECT TO_CHAR(HIREDATE, 'YYYY') AS HIRE_YEAR,\r\n       DEPTNO,\r\n       COUNT(*) AS CNT\r\n  FROM EMP\r\nGROUP BY TO_CHAR(HIREDATE, 'YYYY'), DEPTNO;",
+    "code4" : "SELECT CASE WHEN COMM IS NULL THEN 'X'\r\n            WHEN COMM IS NOT NULL THEN 'O' \r\n            END AS EXIST_COMM\r\n      , COUNT(*) AS CNT      \r\nFROM EMP\r\nGROUP BY CASE WHEN COMM IS NULL THEN 'X'\r\n            WHEN COMM IS NOT NULL THEN 'O' \r\n            END",
+    "code5" : "SELECT DEPTNO\r\n       , EXTRACT(YEAR FROM HIREDATE) AS HIRE_YEAR\r\n       , COUNT(*)AS CNT\r\n       , MAX(SAL) AS MAX_SAL\r\n       , MIN(SAL) AS MIN_SAL\r\n       , SUM(SAL) AS SUM_SAL\r\n       , AVG(SAL) AS AVG_SAL\r\nFROM EMP\r\nGROUP BY ROLLUP(DEPTNO, EXTRACT(YEAR FROM HIREDATE))"
+}

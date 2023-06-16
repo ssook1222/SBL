@@ -1,0 +1,16 @@
+{
+
+    "title" : "8장",
+    "date" : "23-01-15",
+    
+    "subTitle1" : "1",
+    "subTitle2" : "2",
+    "subTitle3" : "3",
+    "subTitle4" : "4",
+
+    "code1" : "SELECT D.DEPTNO\r\n       , D.DNAME\r\n       , E.EMPNO\r\n       , E.ENAME\r\n       , E.SAL\r\nFROM DEPT D JOIN EMP E ON D.DEPTNO = E.DEPTNO\r\nWHERE E.SAL > 2000",
+    "code2" : "SELECT  D.DEPTNO\r\n        , D.DNAME\r\n        , TRUNC(AVG(E.SAL),0) AS AVL_SAL\r\n        , MAX(E.SAL) AS MAX_SAL \r\n        , MIN(E.SAL) AS MIN_SAL\r\n        , COUNT(*) AS CNT\r\nFROM    EMP E INNER JOIN DEPT D\r\nON   E.DEPTNO = D.DEPTNO\r\nGROUP BY D.DEPTNO, D.DNAME\r\nORDER BY D.DEPTNO",
+    "code3" : "SELECT  D.DEPTNO\r\n        , D.DNAME\r\n        , E.EMPNO\r\n        , E.ENAME\r\n        , E.JOB\r\n        , E.SAL\r\nFROM EMP E RIGHT OUTER JOIN DEPT D ON E.DEPTNO = D.DEPTNO\r\nORDER BY D.DEPTNO, D.DNAME",
+    "code4" : "SELECT  D.DEPTNO\r\n        , D.DNAME\r\n        , E.EMPNO\r\n        , E.ENAME\r\n        , E.MGR\r\n        , E.SAL\r\n        , D.DEPTNO AS DEPTNO_1\r\n        , S.LOSAL\r\n        , S.HISAL\r\n        , S.GRADE\r\n        , E.MGR AS MGR_EMPNO\r\n        , E2.ENAME AS MGR_ENAME\r\n        \r\nFROM EMP E  RIGHT OUTER JOIN DEPT D ON D.DEPTNO = E.DEPTNO\r\n            LEFT OUTER JOIN SALGRADE S ON E.SAL BETWEEN S.LOSAL AND S.HISAL\r\n            LEFT OUTER JOIN EMP E2 ON E.MGR = E2.EMPNO\r\nORDER BY D.DEPTNO, D.DNAME      \r\nFROM EMP\r\nGROUP BY CASE WHEN COMM IS NULL THEN 'X'\r\n            WHEN COMM IS NOT NULL THEN 'O' \r\n            END"
+    
+}

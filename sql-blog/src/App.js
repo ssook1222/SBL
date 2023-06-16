@@ -31,6 +31,9 @@ import JuneSecond from './view/qs_june/qs_post_second.jsx'
 //db_basic 폼
 import Ch3 from './view/db_basic/ch3.jsx'
 import Ch4 from './view/db_basic/ch4.jsx'
+import Ch6 from './view/db_basic/ch6.jsx'
+import Ch7 from './view/db_basic/ch7.jsx'
+import Ch8 from './view/db_basic/ch8.jsx'
 import Ch10 from './view/db_basic/ch10.jsx'
 import Ch11 from './view/db_basic/ch11.jsx'
 
@@ -47,6 +50,9 @@ function App() {
 
           <Route exact path="/ch3" element={<Ch3 />} > </Route>
           <Route exact path="/ch4" element={<Ch4 />} > </Route>
+          <Route exact path="/ch6" element={<Ch6 />} > </Route>
+          <Route exact path="/ch7" element={<Ch7 />} > </Route>
+          <Route exact path="/ch8" element={<Ch8 />} > </Route>
           <Route exact path="/ch10" element={<Ch10 />} > </Route>
           <Route exact path="/ch11" element={<Ch11 />} > </Route>
 

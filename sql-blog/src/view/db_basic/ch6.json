@@ -1,0 +1,15 @@
+{
+
+    "title" : "6장",
+    "date" : "23-01-16",
+    
+    "subTitle1" : "1",
+    "subTitle2" : "2",
+    "subTitle3" : "3",
+    "subTitle4" : "4",
+
+    "code1" : "SELECT EMPNO\r\n       , RPAD(SUBSTR(EMPNO, -LENGTH(EMPNO), 2),LENGTH(EMPNO),'*') AS MASKING_EMPNO\r\n       , ENAME\r\n       , RPAD(SUBSTR(ENAME, -LENGTH(ENAME), 2),LENGTH(ENAME),'*') AS MASKING_ENAME \r\n\r\nFROM EMP\r\nWHERE LENGTH(ENAME)=5",
+    "code2" : "SELECT EMPNO\r\n       ,ENAME\r\n       ,SAL\r\n       ,ROUND(SAL\/21.5,1) AS DAY_PAY\r\n       ,ROUND(SAL\/21.5\/8,1) AS TIME_PAY\r\nFROM EMP",
+    "code3" : "SELECT EMPNO\r\n       ,ENAME\r\n       ,TO_CHAR(HIREDATE,'YYYY-MM-DD') AS HIREDATE\r\n       ,TO_CHAR(NEXT_DAY(ADD_MONTHS(HIREDATE,3),'\uC6D4\uC694\uC77C'),'YYYY-MM-DD') AS R_JOB\r\n       ,NVL(TO_CHAR(COMM), 'N\/A') AS COMM\r\nFROM EMP",
+    "code4" : "SELECT EMPNO\r\n       ,ENAME\r\n       ,NVL(TO_CHAR(MGR), ' ') AS MGR\r\n       ,CASE  \r\n             WHEN TO_CHAR(MGR) LIKE '75%' THEN '5555'\r\n             WHEN TO_CHAR(MGR) LIKE '76%' THEN '6666'\r\n             WHEN TO_CHAR(MGR) LIKE '77%' THEN '7777'\r\n             WHEN TO_CHAR(MGR) LIKE '78%' THEN '8888'\r\n             WHEN MGR IS NULL THEN '0000'\r\n             ELSE TO_CHAR(MGR)\r\n                  END AS CHG_MGR\r\nFROM EMP"
+}

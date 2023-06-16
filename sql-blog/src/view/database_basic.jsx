@@ -21,6 +21,18 @@ function DB_basic(){
         navigate('/ch4')
     }
 
+    function ch6(){
+        navigate('/ch6')
+    }
+
+    function ch7(){
+        navigate('/ch7')
+    }
+
+    function ch8(){
+        navigate('/ch8')
+    }
+
     function ch10(){
         navigate('/ch10')
     }
@@ -67,13 +79,13 @@ function DB_basic(){
                     <hr></hr>
                         <Row>
                                 <Col>
-                                    <Button variant="outline-secondary">🫠 6장</Button>
+                                    <Button onClick = {ch6}  variant="outline-secondary">🫠 6장</Button>
                                 </Col>
                                 <Col>
-                                    <Button variant="outline-secondary">😎 7장</Button>
+                                    <Button onClick = {ch7} variant="outline-secondary">😎 7장</Button>
                                 </Col>
                                 <Col>
-                                    <Button variant="outline-secondary">🤫 8장</Button>
+                                    <Button onClick = {ch8} variant="outline-secondary">🤫 8장</Button>
                                 </Col>
                         </Row>
 
