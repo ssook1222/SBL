@@ -1,0 +1,20 @@
+{
+
+    "title" : "12장",
+    "date" : "23-01-25",
+    
+    "subTitle1" : "1",
+    "subTitle2" : "2",
+    "subTitle3" : "3",
+    "subTitle4" : "4",
+    "subTitle5" : "5",
+    "subTitle6" : "6",
+
+    "code1" : "CREATE  TABLE   EMP_HW(\r\n        EMPNO   NUMBER(4)\r\n        , ENAME VARCHAR2(10)\r\n        , JOB VARCHAR2(9)\r\n        , MGR NUMBER(4)\r\n        , HIREDATE DATE\r\n        , SAL NUMBER(7,2)\r\n        , COMM NUMBER(7,2)\r\n        , DEPTNO NUMBER(2)\r\n)",
+    "code2" : "ALTER TABLE EMP_HW\r\n        ADD BIGO VARCHAR2(20)",
+    "code3" : "ALTER TABLE EMP_HW\r\n     MODIFY BIGO VARCHAR(30)",
+    "code4" : "ALTER TABLE EMP_HW\r\n      RENAME COLUMN BIGO TO REMARK",
+    "code5" : "INSERT  INTO EMP_HW\r\n        SELECT  EMPNO\r\n                , ENAME\r\n                , JOB\r\n                , MGR\r\n                , HIREDATE\r\n                , SAL\r\n                , COMM\r\n                , DEPTNO\r\n                , NULL \r\n        FROM EMP",
+    "code6" : "DROP TABLE EMP_HW"
+    
+}

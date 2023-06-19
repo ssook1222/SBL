@@ -33,12 +33,20 @@ function DB_basic(){
         navigate('/ch8')
     }
 
+    function ch9(){
+        navigate('/ch9')
+    }
+
     function ch10(){
         navigate('/ch10')
     }
 
     function ch11(){
         navigate('/ch11')
+    }
+
+    function ch12(){
+        navigate('/ch12')
     }
 
     return(
@@ -91,13 +99,13 @@ function DB_basic(){
 
                         <Row style={{marginTop:"20px"}}>
                                 <Col>
-                                    <Button variant="outline-secondary">🫥 9장</Button>
+                                    <Button onClick = {ch9} variant="outline-secondary">🫥 9장</Button>
                                 </Col>
                                 <Col>
                                     <Button onClick = {ch10} variant="outline-secondary">😔 10장</Button>
                                 </Col>
                                 <Col>
-                                    <Button variant="outline-secondary">🤭 12장</Button>
+                                    <Button onClick = {ch12} variant="outline-secondary">🤭 12장</Button>
                                 </Col>
                         </Row>
 

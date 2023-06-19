@@ -34,8 +34,10 @@ import Ch4 from './view/db_basic/ch4.jsx'
 import Ch6 from './view/db_basic/ch6.jsx'
 import Ch7 from './view/db_basic/ch7.jsx'
 import Ch8 from './view/db_basic/ch8.jsx'
+import Ch9 from './view/db_basic/ch9.jsx'
 import Ch10 from './view/db_basic/ch10.jsx'
 import Ch11 from './view/db_basic/ch11.jsx'
+import Ch12 from './view/db_basic/ch12.jsx'
 
 function App() {
   return (
@@ -53,8 +55,11 @@ function App() {
           <Route exact path="/ch6" element={<Ch6 />} > </Route>
           <Route exact path="/ch7" element={<Ch7 />} > </Route>
           <Route exact path="/ch8" element={<Ch8 />} > </Route>
+          <Route exact path="/ch9" element={<Ch9 />} > </Route>
           <Route exact path="/ch10" element={<Ch10 />} > </Route>
           <Route exact path="/ch11" element={<Ch11 />} > </Route>
+          <Route exact path="/ch12" element={<Ch12 />} > </Route>
+
 
           <Route exact path="/jan-first" element={<JanFirst />} > </Route>
           <Route exact path="/jan-second" element={<JanSecond />} > </Route>
