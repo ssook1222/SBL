@@ -38,6 +38,9 @@ import Ch9 from './view/db_basic/ch9.jsx'
 import Ch10 from './view/db_basic/ch10.jsx'
 import Ch11 from './view/db_basic/ch11.jsx'
 import Ch12 from './view/db_basic/ch12.jsx'
+import Ch13 from './view/db_basic/ch13.jsx'
+import Ch14 from './view/db_basic/ch14.jsx'
+import Ch15 from './view/db_basic/ch15.jsx'
 
 function App() {
   return (
@@ -59,7 +62,9 @@ function App() {
           <Route exact path="/ch10" element={<Ch10 />} > </Route>
           <Route exact path="/ch11" element={<Ch11 />} > </Route>
           <Route exact path="/ch12" element={<Ch12 />} > </Route>
-
+          <Route exact path="/ch13" element={<Ch13 />} > </Route>
+          <Route exact path="/ch14" element={<Ch14 />} > </Route>
+          <Route exact path="/ch15" element={<Ch15 />} > </Route>
 
           <Route exact path="/jan-first" element={<JanFirst />} > </Route>
           <Route exact path="/jan-second" element={<JanSecond />} > </Route>

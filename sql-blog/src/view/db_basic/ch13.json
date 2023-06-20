@@ -1,0 +1,13 @@
+{
+
+    "title" : "13장",
+    "date" : "23-01-24",
+    
+    "subTitle1" : "1",
+    "subTitle2" : "2",
+    "subTitle3" : "3",
+
+    "code1" : "CREATE  VIEW    EMPIDX_OVER15K\r\n    AS  (\r\n        SELECT  EMPNO\r\n                , ENAME\r\n                , JOB\r\n                , DEPTNO\r\n                , SAL\r\n                ,CASE    WHEN COMM IS NULL THEN 'X'\r\n                        WHEN COMM IS NOT NULL THEN 'O' \r\n                END     AS COMM\r\n        FROM    EMPIDX\r\n        WHERE   SAL > 1500     \r\n    )",
+    "code2" : "CREATE  SEQUENCE DEPTSEQ_\r\n        INCREMENT BY 1\r\n        START WITH 1\r\n        MAXVALUE 99\r\n        MINVALUE 1\r\n        NOCYCLE\r\n        NOCACHE",
+    "code3" : "INSERT  INTO DEPTSEQ(DEPTNO, DNAME, LOC)\r\n        VALUES(DEPTSEQ_.NEXTVAL, 'DATABASE', 'SEOUL')\r\n\r\nINSERT  INTO DEPTSEQ(DEPTNO, DNAME, LOC)\r\n        VALUES(DEPTSEQ_.NEXTVAL, 'WEB', 'BUSAN')\r\n        \r\nINSERT  INTO DEPTSEQ(DEPTNO, DNAME, LOC)\r\n        VALUES(DEPTSEQ_.NEXTVAL, 'MOBILE', 'ILSAN')"
+}

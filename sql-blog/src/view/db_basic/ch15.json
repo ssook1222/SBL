@@ -1,0 +1,15 @@
+{
+
+    "title" : "15장",
+    "date" : "23-01-25",
+    
+    "subTitle1" : "1",
+    "subTitle2" : "2",
+    "subTitle3" : "3",
+    "subTitle4" : "4",
+
+    "code1" : "CREATE USER C##PREV_HW\r\nIDENTIFIED BY ORCL",
+    "code2" : "GRANT CREATE SESSION TO C##PREV_HW",
+    "code3" : "GRANT   SELECT ON   EMP TO C##PREV_HW\r\nGRANT   SELECT ON   DEPT TO C##PREV_HW\r\nGRANT   SELECT ON   SALGRADE TO C##PREV_HW",
+    "code4" : "REVOKE  SELECT ON SALGRADE\r\nFROM    C##PREV_HW"
+}
