@@ -1,0 +1,17 @@
+{
+
+    "title" : "First Story",
+    "date" : "23-05-02",
+    
+    "subTitle1" : "1",
+    "subTitle2" : "2",
+    "subTitle3" : "3",
+    "subTitle4" : "4",
+    "subTitle5" : "5",
+
+    "code1" : "SELECT *\r\nFROM student",
+    "code2" : "UPDATE student SET grade = grade + 1;\r\n\r\nSELECT *\r\nFROM student",
+    "code3" : "\r\n\r\nINSERT INTO student VALUES (1005, 'Alice', 1, 104) ;\r\nINSERT INTO student VALUES (1006, 'Bob', 1, 104) ;\r\nINSERT INTO student VALUES (1007, 'Charles', 1, 105);\r\n\r\nSELECT *\r\nFROM student\r\nWHERE id >= 1005",
+    "code4" : "ALTER TABLE student\r\nADD COLUMN caution int DEFAULT 0;\r\n\r\nSELECT caution\r\nFROM student",
+    "code5" : "UPDATE student SET caution = caution + 1 WHERE grade = 3;\r\n\r\nSELECT *\r\nFROM student\r\nWHERE caution >= 1"
+}

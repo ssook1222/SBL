@@ -1,0 +1,17 @@
+{
+
+    "title" : "Second Story",
+    "date" : "23-05-02",
+    
+    "subTitle1" : "1",
+    "subTitle2" : "2",
+    "subTitle3" : "3",
+    "subTitle4" : "4",
+    "subTitle5" : "5",
+
+    "code1" : "SELECT name, caution\r\nFROM student\r\norder by caution desc;",
+    "code2" : "SELECT name, caution\r\nFROM student\r\nWHERE name = 'Dodo';\r\n\r\nDELETE  FROM student\r\n        WHERE name = 'Dodo';\r\n\r\nSELECT *\r\nFROM student",
+    "code3" : "SELECT name, grade\r\nFROM student\r\nWHERE name LIKE '%pi%'",
+    "code4" : "SELECT      room\r\n            , count(*)\r\nFROM        student\r\ngroup by    room",
+    "code5" : "SELECT      room\r\nFROM        student\r\nGROUP BY    room\r\nHAVING      count(*) = 1"
+}

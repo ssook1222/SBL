@@ -1,11 +1,11 @@
 import React from "react";
 
 import Navbar from "../../components/navbar"
-import data from "../qs_may/qs_post_first.json"
+import data from "../alice_academy/first_story.json"
 
 import Highlight from 'react-highlight'
 
-function Db_post(){
+function Alice_post(){
     return(
         <>
             <div style = {{backgroundColor: 'rgb(58, 44, 26)', width:'100%', height: '3px'}} ></div>
@@ -96,8 +96,6 @@ function Db_post(){
                             </Highlight>
                         </div>
                     </div>
-                    <hr></hr>
-
                 </div>
 
             </div>
@@ -105,4 +103,4 @@ function Db_post(){
     )
 }
 
-export default Db_post;
+export default Alice_post;

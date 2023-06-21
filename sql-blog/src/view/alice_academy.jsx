@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Navbar from "../components/navbar"
 
@@ -13,6 +14,15 @@ import Col from 'react-bootstrap/Col';
 function Main_view(){
 
     const [key, setKey] = useState('first');
+    const navigate = useNavigate();
+
+    function aliceAcademy1(){
+        navigate('/aa1')
+    }
+
+    function aliceAcademy2(){
+        navigate('/aa2')
+    }
 
     return(
         <>
@@ -41,7 +51,7 @@ function Main_view(){
                                 <Card.Text>
                                     DDL, 기초 쿼리 문제 
                                 </Card.Text>
-                                <Button style={{fontWeight:"100", color:"black", marginTop:"10px"}} variant="outline-light"> 
+                                <Button onClick = {aliceAcademy1} style={{fontWeight:"100", color:"black", marginTop:"10px"}} variant="outline-light"> 
                                     확인하러 가기
                                 </Button>
                             </Card.Body>
@@ -55,13 +65,15 @@ function Main_view(){
                                 <Card.Text>
                                     DDL, 집계함수 문제 
                                 </Card.Text>
-                                <Button style={{fontWeight:"100", color:"black", marginTop:"10px"}} variant="outline-light"> 
+                                <Button onClick = {aliceAcademy2} style={{fontWeight:"100", color:"black", marginTop:"10px"}} variant="outline-light"> 
                                     확인하러 가기
                                 </Button>
                             </Card.Body>
                         </Card>
                     </Col>
+                </Row>
 
+                <Row style={{marginTop:"30px"}}>
                     <Col>
                         <Card>
                             <Card.Body>

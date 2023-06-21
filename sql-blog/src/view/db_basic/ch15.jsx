@@ -13,7 +13,7 @@ function Db_post(){
             <Navbar></Navbar>
             <div style={{width: "80%", marginRight:"auto", marginLeft:"auto", marginTop:"1%", marginBottom:"5%"}}>
                 
-                <div>
+                <div>z
                     <h1>{data.title}</h1>
                     <hr></hr>
                     <h3 style={{textAlign:"right", fontWeight:"100"}}>{data.date}</h3>

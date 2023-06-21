@@ -42,6 +42,10 @@ import Ch13 from './view/db_basic/ch13.jsx'
 import Ch14 from './view/db_basic/ch14.jsx'
 import Ch15 from './view/db_basic/ch15.jsx'
 
+//Alice Academy 폼
+import AA1 from './view/alice_academy/first_story.jsx'
+import AA2 from './view/alice_academy/second_story.jsx'
+
 function App() {
   return (
     <BrowserRouter>
@@ -83,6 +87,9 @@ function App() {
 
           <Route exact path="/june-first" element={<JuneFirst />} > </Route>
           <Route exact path="/june-second" element={<JuneSecond />} > </Route>
+
+          <Route exact path="/aa1" element={<AA1 />} > </Route>
+          <Route exact path="/aa2" element={<AA2 />} > </Route>
 
       </Routes>
     </BrowserRouter> 
