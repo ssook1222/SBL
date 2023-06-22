@@ -24,6 +24,14 @@ function Main_view(){
         navigate('/aa2')
     }
 
+    function aliceAcademy3(){
+        navigate('/aa3')
+    }
+
+    function aliceAcademy4(){
+        navigate('/aa4')
+    }
+
     return(
         <>
             <div style = {{backgroundColor: 'rgb(58, 44, 26)', width:'100%', height: '3px'}} ></div>
@@ -81,7 +89,7 @@ function Main_view(){
                                 <Card.Text>
                                     조금 심화된 DDL, 조회 문제 
                                 </Card.Text>
-                                <Button style={{fontWeight:"100", color:"black", marginTop:"10px"}} variant="outline-light"> 
+                                <Button onClick = {aliceAcademy3} style={{fontWeight:"100", color:"black", marginTop:"10px"}} variant="outline-light"> 
                                     확인하러 가기
                                 </Button>
                             </Card.Body>
@@ -95,7 +103,7 @@ function Main_view(){
                                 <Card.Text>
                                     조금 더 심화된 쿼리 문제 
                                 </Card.Text>
-                                <Button style={{fontWeight:"100", color:"black", marginTop:"10px"}} variant="outline-light"> 
+                                <Button onClick = {aliceAcademy4} style={{fontWeight:"100", color:"black", marginTop:"10px"}} variant="outline-light"> 
                                     확인하러 가기
                                 </Button>
                             </Card.Body>

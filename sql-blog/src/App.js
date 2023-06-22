@@ -45,6 +45,8 @@ import Ch15 from './view/db_basic/ch15.jsx'
 //Alice Academy 폼
 import AA1 from './view/alice_academy/first_story.jsx'
 import AA2 from './view/alice_academy/second_story.jsx'
+import AA3 from './view/alice_academy/third_story.jsx'
+import AA4 from './view/alice_academy/fourth_story.jsx'
 
 function App() {
   return (
@@ -90,6 +92,8 @@ function App() {
 
           <Route exact path="/aa1" element={<AA1 />} > </Route>
           <Route exact path="/aa2" element={<AA2 />} > </Route>
+          <Route exact path="/aa3" element={<AA3 />} > </Route>
+          <Route exact path="/aa4" element={<AA4 />} > </Route>
 
       </Routes>
     </BrowserRouter> 

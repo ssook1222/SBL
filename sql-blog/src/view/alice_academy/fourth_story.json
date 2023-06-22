@@ -1,0 +1,17 @@
+{
+
+    "title" : "Fourth Story",
+    "date" : "23-05-22",
+    
+    "subTitle1" : "가게 DB 구축하기",
+    "subTitle2" : "가게 DB 분석하기",
+    "subTitle3" : "유통기한이 얼마 남지 않은 물건 확인하기",
+    "subTitle4" : "판매기록 출력하기",
+    "subTitle5" : "물건별 판매량 출력하기",
+
+    "code1" : "INSERT INTO product VALUES(1, 'carrot', 100, '2019-04-10', 1000, 900);\r\nINSERT INTO product VALUES(2, 'tea', 1000, '2020-02-10', 1000, 900);\r\nINSERT INTO product VALUES(3, 'clock', 100, null , 200000, 180000);\r\n\r\nSELECT  *\r\nFROM    product",
+    "code2" : "SELECT COUNT(*) \r\nFROM (\r\n    SELECT NAME, COUNT(*) \r\n    FROM product \r\n    GROUP BY NAME\r\n) AS KIND;\r\n\r\nSELECT SUM(STOCK)\r\nFROM product;\r\n\r\nSELECT MAX(SELLING_PRICE)\r\nFROM product",
+    "code3" : "SELECT *\r\nFROM product\r\nWHERE expiration_date < '2019-05-01';\r\n\r\nSELECT sum(stock)\r\nFROM product\r\nWHERE expiration_date < '2019-05-01';",
+    "code4" : "select * from sale right join product on product.id = sale.product_id;",
+    "code5" : "select product_id\r\n        , sum(amount)\r\nfrom sale\r\ngroup by product_id\r\nhaving COUNT(product_id) > 1"
+}

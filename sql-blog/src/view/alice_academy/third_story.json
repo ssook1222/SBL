@@ -1,0 +1,17 @@
+{
+
+    "title" : "Third Story",
+    "date" : "23-05-21",
+    
+    "subTitle1" : "쪽지시험 성적 분석하기",
+    "subTitle2" : "쪽지시험 성적 분석하기 2",
+    "subTitle3" : "학점 계산하기",
+    "subTitle4" : "신체 검사표",
+    "subTitle5" : "주주총회",
+
+    "code1" : "SELECT  avg(score)\r\nFROM student;\r\n\r\nSELECT  max(score)\r\n        , min(score)\r\nFROM student;\r\n\r\nSELECT  *\r\nFROM student\r\nORDER BY score desc\r\nLIMIT 3;",
+    "code2" : "SELECT count(*)\r\nFROM student\r\nWHERE score > 80;\r\n\r\nSELECT name\r\nFROM student\r\nORDER BY score desc\r\nLIMIT 1;\r\n\r\nSELECT grade\r\n        , avg(score)\r\nFROM student\r\nGROUP BY grade;",
+    "code3" : "ALTER   TABLE student\r\n        ADD score float;\r\n\r\nUPDATE student \r\nSET score = (((midterm + final)*4.5)\/200);\r\n\r\nSELECT  name,\r\n        score\r\nFROM    student;",
+    "code4" : "SELECT  gender\r\n        , avg(height)\r\n        , avg(weight)\r\nFROM    student\r\nGROUP BY gender;\r\n\r\nSELECT  weight\r\nFROM    student\r\nWHERE   gender = 'M'\r\nORDER BY height desc\r\nLIMIT 1;\r\n\r\nSELECT  weight\r\nFROM    student\r\nWHERE   gender = 'F'\r\nORDER BY height\r\nLIMIT 1;",
+    "code5" : "SELECT  stock\r\nFROM    shareholder\r\nWHERE   name = 'Alexis' or name = 'Craig' or name = 'Fred' ;\r\n\r\nSELECT  name\r\n        , stock\r\nFROM    shareholder\r\nWHERE   agree = 0 and stock >= 100000;\r\n\r\nSELECT  name\r\n        , stock\r\nFROM    shareholder\r\nWHERE   agree = 1 and stock >= 100000;"
+}
