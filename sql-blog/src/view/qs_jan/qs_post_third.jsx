@@ -27,8 +27,9 @@ function Db_post(){
                             {data.code1}
                         </Highlight>
                     </div>
+                    <div>JOIN할 때 Having 절 조건 즉, 그룹화된 조건에서 데이터를 사전에 처리하고 가져와서 조인하면 사라지는 데이터가 있는 듯</div>
+                    <div>따라서 먼저 그룹화할 때 처리를 하지 말고 조인 이후에 Where 절로 나중에 처리해야 정답 처리 되고 있음.</div>
                 </div>
-                <hr></hr>
                 <hr></hr>
 
                 <div>
@@ -45,10 +46,11 @@ function Db_post(){
                         </Highlight>
                     </div>
                 </div>
+                <div>우유도 사고 요거트도 산 케이스만 뽑아내면 됨</div>
+                <div>굳이 With를 쓸 필요가 있었을까 싶긴 함...ㅋㅋㅋㅋ</div>
                 <hr></hr>
 
                 <div>
-                    <hr></hr>
                     <h5 style={{marginBottom:"2%"}}>{data.subTitle3}</h5>
                     <div style={{
                         border:"1px solid #eedfd0",
@@ -61,6 +63,8 @@ function Db_post(){
                             {data.code3}
                         </Highlight>
                     </div>
+                    <div>group by와 다르게 SELECT절에 명시 안 한 칼럼이어도 <i>order by</i>에서는 사용 가능하다.</div>
+                    
                 </div>
                 
             </div>    

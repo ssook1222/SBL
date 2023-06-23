@@ -29,7 +29,7 @@ function Db_post(){
                             </Highlight>
                         </div>
                     </div>
-
+                    <div>END_DATE - START_DATE + 1. 1을 더해줘야 기간이 제대로 나온다.</div>
                     <hr></hr>
 
                     <div>
@@ -46,6 +46,8 @@ function Db_post(){
                             </Highlight>
                         </div>
                     </div>
+                    <div>WITH 구문 써서 풀었음</div>
+                    <div>개인적으로는 INNER JOIN 사용해갖구 명시한 다음 푸는 게 더 깔끔했을 듯</div>
 
                     <hr></hr>
 

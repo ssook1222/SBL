@@ -46,8 +46,9 @@ function Db_post(){
                             {data.code2}
                         </Highlight>
                     </div>
+                        <div>프로그래머스로 풀었을 때 문제의 조건과 정답 조건이 달랐던 문제.</div> 
+                        <div>문제 풀이를 추천하지는 않음!</div>
                 </div>
-                <hr></hr>
 
                 <div>
                     <hr></hr>
