@@ -28,6 +28,13 @@ function Db_post(){
                                 {data.code1}
                             </Highlight>
                         </div>
+                        <div>
+                            <i>LIKE</i>를 써서 풀었지만, <i>CONTAINS</i>도 사용가능함.
+                        </div>
+                        <div>아래는 CONTAINS 관련 오라클 공식 문서 링크임.</div>
+                        <a 
+                            style = {{textDecoration:"none"}}
+                            href="https://docs.oracle.com/database/121/CCAPP/GUID-5BE34ED3-4B35-412A-BD53-E3F663B9EB8C.htm">공식 문서 확인하러 이동</a>
                     </div>
 
                     <hr></hr>
@@ -80,7 +87,8 @@ function Db_post(){
                             </Highlight>
                         </div>
                     </div>
-                    <hr></hr>
+                    <div>3중으로 중첩해서 쿼리를 썼기 때문에 성능 면에서 좋은지는 잘 모르겠음.</div>
+                    <div><i>WITH</i>문 안에서 <i>WITH</i>문 또 선언하면 에러가 남</div>
                 </div>
 
             </div>
