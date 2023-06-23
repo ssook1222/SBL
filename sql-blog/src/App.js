@@ -48,6 +48,8 @@ import AA2 from './view/alice_academy/second_story.jsx'
 import AA3 from './view/alice_academy/third_story.jsx'
 import AA4 from './view/alice_academy/fourth_story.jsx'
 
+import RssFeed from './view/rss_feed.jsx'
+
 function App() {
   return (
     <BrowserRouter>
@@ -94,6 +96,8 @@ function App() {
           <Route exact path="/aa2" element={<AA2 />} > </Route>
           <Route exact path="/aa3" element={<AA3 />} > </Route>
           <Route exact path="/aa4" element={<AA4 />} > </Route>
+
+          <Route exact path="/rss-feed" element={<RssFeed />}></Route>
 
       </Routes>
     </BrowserRouter> 
