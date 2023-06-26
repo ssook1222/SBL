@@ -91,6 +91,7 @@ function Db_post(){
                             {data.code5}
                         </Highlight>
                     </div>
+                    <div>Insert Into에 <b>subquery</b>를 적용한 문제</div>
                 </div>
                 <hr></hr>
 

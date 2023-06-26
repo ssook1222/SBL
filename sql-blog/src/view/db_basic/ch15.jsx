@@ -13,7 +13,7 @@ function Db_post(){
             <Navbar></Navbar>
             <div style={{width: "80%", marginRight:"auto", marginLeft:"auto", marginTop:"1%", marginBottom:"5%"}}>
                 
-                <div>z
+                <div>
                     <h1>{data.title}</h1>
                     <hr></hr>
                     <h3 style={{textAlign:"right", fontWeight:"100"}}>{data.date}</h3>
@@ -47,6 +47,8 @@ function Db_post(){
                             {data.code2}
                         </Highlight>
                     </div>
+                    <div>테이블 있는 계정으로 가서 권한을 부여해야 함.</div>
+                    <div>무턱대고 SYSTEM 계정에서 권한 부여하다가는 에러남</div>
                 </div>
                 <hr></hr>
 

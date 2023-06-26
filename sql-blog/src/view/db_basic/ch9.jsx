@@ -64,6 +64,7 @@ function Db_post(){
 
                 <div>
                     <h5 style={{marginBottom:"2%"}}>{data.subTitle4}</h5>
+                    <h6>다중 행 함수 사용하는 방법</h6>
                     <div style={{
                         border:"1px solid #eedfd0",
                         borderRadius:"10px",
@@ -73,6 +74,19 @@ function Db_post(){
                         }}>
                         <Highlight language="SQL">
                             {data.code4}
+                        </Highlight>
+                    </div>
+
+                    <h6>다중 행 함수 사용하지 않는 방법</h6>
+                    <div style={{
+                        border:"1px solid #eedfd0",
+                        borderRadius:"10px",
+                        boxShadow: "0.1px 0.1px 5px #d8c6b5, -0.1px -0.1px 5px #d8c6b5",
+                        padding: "10px",
+                        marginBottom:"2%"
+                        }}>
+                        <Highlight language="SQL">
+                            {data.code5}
                         </Highlight>
                     </div>
                 </div>
