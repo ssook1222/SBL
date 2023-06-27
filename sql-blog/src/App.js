@@ -4,6 +4,7 @@ import Main from './view/main.jsx'
 import DB_basic from './view/database_basic.jsx';
 import SQL_query from './view/query_solve.jsx'
 import Academy from './view/alice_academy.jsx'
+import Others from './view/others.jsx';
 
 // recommend 폼
 
@@ -58,6 +59,8 @@ function App() {
           <Route exact path="/db-basic" element={<DB_basic />} > </Route>
           <Route exact path="/sql-query" element={<SQL_query />} > </Route>
           <Route exact path="/academy" element={<Academy />} > </Route>
+          <Route exact path="others" element={<Others />} > </Route>
+
 
           <Route exact path="/cert" element={<Cert />} > </Route>
 

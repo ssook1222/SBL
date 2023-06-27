@@ -18,6 +18,7 @@ function Main_view(){
                         <Nav.Link id="sql1" href="db-basic" style={{ marginRight: '30px' }} >데이터베이스 입문</Nav.Link>
                         <Nav.Link id="sql2" href="sql-query" style={{ marginLeft: '30px', marginRight: '30px' }}>SQL 문제풀이</Nav.Link>
                         <Nav.Link id="sql3" href="academy" style={{ marginLeft: '30px' , marginRight: '30px'}}>Alice Academy</Nav.Link>
+                        <Nav.Link id="sql4" href="others" style={{ marginLeft: '30px' , marginRight: '30px'}}>기타</Nav.Link>
                     </Nav>
                     </Navbar.Collapse>
                 </Container>

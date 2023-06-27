@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../components/navbar"
+import {Helmet} from 'react-helmet'
 
 import Image from 'react-bootstrap/Image';
 import Col from 'react-bootstrap/Col';
@@ -7,6 +8,12 @@ import Col from 'react-bootstrap/Col';
 function Certficate_post(){
     return(
         <>
+            <Helmet>
+                <meta   name="description" 
+                        content="DASP, ADSP, SQLD 자격증 취득 후기 정리한 포스팅, 공부 기간 및 난이도 관련 내용 포함" 
+                        data-react-helmet="true"
+                />
+            </Helmet>
             <Navbar></Navbar>
             <div style={{width: "80%", marginRight:"auto", marginLeft:"auto", marginTop:"1%", marginBottom:"5%"}}>
             <div>
