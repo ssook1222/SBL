@@ -1,0 +1,17 @@
+{
+
+    "title" : "6월 3주차 문제 풀이 기록",
+    "date" : "23-06-11 ~ 23-06-14",
+    
+    "subTitle1" : "The Report",
+    "subTitle2" : "The PADS",
+    "subTitle3" : "1327. List the Products Ordered in a Period",
+    "subTitle4" : "1251. Average Selling Price",
+    "subTitle5" : "196. Delete Duplicate Emails",
+
+    "code1" : "SELECT CASE WHEN B.GRADE >= 8 THEN A.NAME ELSE NULL END AS NAME,\r\n       B.GRADE,\r\n       A.MARKS\r\nFROM STUDENTS A\r\nINNER JOIN GRADES B ON A.MARKS BETWEEN B.MIN_MARK AND B.MAX_MARK\r\nORDER BY CASE WHEN B.GRADE >= 8 THEN -B.GRADE END ASC,\r\n         CASE WHEN B.GRADE >= 8 THEN A.NAME END ASC, \r\n         CASE WHEN B.GRADE < 8 THEN -B.GRADE END ASC,\r\n         CASE WHEN B.GRADE < 8 THEN A.MARKS END ASC;\r\n",
+    "code2" : "SELECT  CONCAT(NAME, '(',LEFT(OCCUPATION, 1),')') AS RESULT\r\nFROM    OCCUPATIONS\r\nORDER BY RESULT;\r\n\r\nSELECT CONCAT('There are a total of ', COUNT(occupation), ' ', LOWER(occupation), 's.') AS result\r\nFROM OCCUPATIONS\r\nGROUP BY occupation\r\nORDER BY COUNT(occupation), LOWER(occupation);\r\n",
+    "code3" : "SELECT      A.PRODUCT_NAME\r\n            , SUM(B.UNIT) AS UNIT\r\nFROM        PRODUCTS A INNER JOIN ORDERS B\r\nON          A.PRODUCT_ID = B.PRODUCT_ID\r\nWHERE       EXTRACT(MONTH FROM B.ORDER_DATE) = 2 \r\nGROUP BY    A.PRODUCT_NAME\r\nHAVING      SUM(B.UNIT) >= 100\r\nORDER BY    SUM(B.UNIT)\r\n",
+    "code4" : "SELECT\r\n        p.product_id,\r\n        ROUND(SUM(u.units * p.price)\/SUM(u.units), 2) AS average_price\r\nFROM\r\n        UnitsSold u\r\nJOIN\r\n        Prices p \r\n        ON u.product_id = p.product_id\r\n        AND u.purchase_date BETWEEN p.start_date AND p.end_date\r\nGROUP BY\r\n        p.product_id\r\n",
+    "code5" : "DELETE FROM Person\r\nWHERE id NOT IN (\r\n    SELECT MIN(id)\r\n    FROM Person\r\n    GROUP BY email\r\n)\r\n"
+}

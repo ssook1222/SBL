@@ -14,6 +14,6 @@
     "code2" : "SELECT  salary_months\r\n        , COUNT(*)\r\nFROM (\r\n      SELECT salary * months AS salary_months\r\n      FROM employee\r\n     ) AS subquery\r\nWHERE salary_months = (\r\n      SELECT MAX(salary * months)\r\n      FROM employee\r\n)\r\nGROUP BY salary_months;",
     "code3" : "SELECT      cnt.continent\r\n            , floor(avg(ct.population))\r\nFROM        country cnt \r\nINNER JOIN city ct on ct.countrycode = cnt.code\r\nGROUP BY    cnt.continent\r\n;",
     "code4" : "SELECT  ROUND(SUM(LAT_N),2),\r\n        ROUND(SUM(LONG_W),2)\r\nFROM    STATION;",
-    "code5" : "SSELECT      TRUNC(SUM(LAT_N), 4)\r\nFROM        STATION\r\nWHERE       LAT_N >= 38.7880 AND LAT_N <= 137.2345;",
+    "code5" : "SELECT      TRUNC(SUM(LAT_N), 4)\r\nFROM        STATION\r\nWHERE       LAT_N >= 38.7880 AND LAT_N <= 137.2345;",
     "code6" : "SELECT  TRUNC(MAX(LAT_N),4)\r\nFROM    STATION\r\nWHERE   LAT_N < 137.2345;"
 }

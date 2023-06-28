@@ -29,24 +29,23 @@ function Others(){
 
         <Row style={{display:"block", marginTop: "1%"}}>
             <Col>
-                <Card style={{ width: '18rem', margin:"auto" }}>
-                    <Card.Img variant="top" src="/img/ceft.png" />
-                    <Card.Body>
-                        <Card.Title>SQLD, ADSP, DASP 자격증 취득 후기</Card.Title>
-                        <Card.Text>
-                            오늘 딱 DASP 자격증 취득을 끝내며, <br></br>
-                            한국데이터산업진흥원에서 주관하는 자격증들 중 빅분기(빅데이터분석기사)를 제외한 자격증 취득을 완료했다!
-                        </Card.Text>
-                    </Card.Body>
-                    <Card.Body>
-                        <Card.Link href="/cert">포스팅으로 이동</Card.Link>
-                    </Card.Body>
-                </Card>
+                    <Card style={{ width: '18rem', margin:"auto" }}>
+                        <a href = '/cert' style={{textDecoration:"none"}}>
+                            <Card.Img variant="top" src="/img/ceft.png" />
+                            <Card.Body>
+                                <Card.Title style={{color:"black"}}>SQLD, ADSP, DASP 자격증 취득 후기</Card.Title>
+                                <Card.Text>
+                                    오늘 딱 DASP 자격증 취득을 끝내며, <br></br>
+                                    한국데이터산업진흥원에서 주관하는 자격증들 중 빅분기(빅데이터분석기사)를 제외한 자격증 취득을 완료했다!
+                                </Card.Text>
+                            </Card.Body>
+                        </a>
+                    </Card>
             </Col>
         </Row>
         
 
-            </div>
+        </div>
 
         </>
     )
