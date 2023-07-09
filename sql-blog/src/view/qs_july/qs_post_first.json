@@ -1,0 +1,25 @@
+{
+
+    "title" : "7월 1주차 문제 풀이 기록",
+    "date" : "23-07-05 ~ 23-07-07",
+    
+    "subTitle1" : "1757. Recyclable and Low Fat Products",
+    "subTitle2" : "595. Big Countries",
+    "subTitle3" : "1484. Group Sold Products By The Date",
+    "subTitle4" : "584. Find Customer Referee",
+    "subTitle5" : "586. Customer Placing the Largest Number of Orders",
+    "subTitle6" : "1050. Actors and Directors Who Cooperated At Least Three Times",
+    "subTitle7" : "1789. Primary Department for Each Employee",
+    "subTitle8" : "1075. Project Employees I",
+    "subTitle9" : "1407. Top Travellers",
+
+    "code1" : "SELECT  PRODUCT_ID\r\nFROM    PRODUCTS\r\nWHERE   LOW_FATS = 'Y' AND RECYCLABLE = 'Y'\r\n",
+    "code2" : "SELECT  NAME\r\n        , POPULATION\r\n        , AREA\r\nFROM    WORLD\r\nWHERE   AREA >= 3000000 OR POPULATION >= 25000000\r\n",
+    "code3" : "SELECT  sell_date\r\n        , COUNT(DISTINCT product) AS num_sold\r\n        , GROUP_CONCAT(Distinct product ORDER BY product) AS products\r\nFROM Activities\r\nGROUP BY sell_date\r\nORDER BY sell_date\r\n",
+    "code4" : "SELECT      NAME\r\nFROM        CUSTOMER\r\nWHERE       REFEREE_ID IS NULL OR REFEREE_ID != 2\r\n",
+    "code5" : "SELECT      CUSTOMER_NUMBER\r\nFROM        ORDERS\r\nGROUP BY    CUSTOMER_NUMBER\r\nHAVING      COUNT(*) >= 2\r\n",
+    "code6" : "SELECT      ACTOR_ID\r\n            , DIRECTOR_ID\r\n\r\nFROM        ACTORDIRECTOR\r\nGROUP BY    ACTOR_ID\r\n            , DIRECTOR_ID\r\nHAVING      COUNT(*) >= 3\r\n",
+    "code7" : "SELECT employee_id, department_id\r\nFROM Employee\r\nWHERE primary_flag = 'Y'\r\nUNION\r\nSELECT employee_id, department_id\r\nFROM Employee\r\nWHERE employee_id NOT IN (\r\n    SELECT employee_id\r\n    FROM Employee\r\n    WHERE primary_flag = 'Y'\r\n)\r\n",
+    "code8" : "SELECT          p.project_id, ROUND(AVG(e.experience_years), 2) as average_years\r\nFROM            project p\r\nINNER JOIN      employee e ON p.employee_id = e.employee_id\r\nGROUP BY        p.project_id;\r\n",
+    "code9" : "SELECT u.name, COALESCE(SUM(r.distance), 0) AS travelled_distance\r\nFROM Users u\r\nLEFT JOIN Rides r ON u.id = r.user_id\r\nGROUP BY u.id, u.name\r\nORDER BY travelled_distance DESC, u.name ASC;\r\n"
+}
