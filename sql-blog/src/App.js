@@ -31,6 +31,7 @@ import JuneSecond from './view/qs_june/qs_post_second.jsx'
 import JuneThird from './view/qs_june/qs_post_third.jsx'
 
 import JulyFirst from './view/qs_july/qs_post_first.jsx'
+import JulySecond from './view/qs_july/qs_post_second.jsx'
 
 //db_basic 폼
 import Ch3 from './view/db_basic/ch3.jsx'
@@ -100,6 +101,7 @@ function App() {
           <Route exact path="/june-third" element={<JuneThird />} > </Route>
 
           <Route exact path="/july-first" element={<JulyFirst />} > </Route>
+          <Route exact path="/july-second" element={<JulySecond />} > </Route>
 
           <Route exact path="/aa1" element={<AA1 />} > </Route>
           <Route exact path="/aa2" element={<AA2 />} > </Route>

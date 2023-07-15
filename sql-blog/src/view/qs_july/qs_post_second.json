@@ -1,0 +1,19 @@
+{
+
+    "title" : "7월 2주차 문제 풀이 기록",
+    "date" : "23-07-13 ~ 23-07-14",
+    
+    "subTitle1" : "1667. Fix Names in a Table",
+    "subTitle2" : "1280. Students and Examinations",
+    "subTitle3" : "The Report",
+    "subTitle4" : "SQL Project Planning",
+    "subTitle5" : "Draw The Triangle 1",
+    "subTitle6" : "Draw The Triangle 2",
+
+    "code1" : "SELECT      USER_ID\r\n            , INITCAP(NAME) AS NAME\r\nFROM        USERS\r\nORDER BY    USER_ID",
+    "code2" : "SELECT      S.student_id\r\n            , S.student_name\r\n            , COALESCE(SUB.subject_name, E.subject_name) AS subject_name\r\n            , COALESCE(COUNT(E.subject_name), 0) AS attended_exams\r\nFROM        Students S\r\nCROSS JOIN  Subjects SUB\r\nLEFT JOIN   Examinations E ON S.student_id = E.student_id AND SUB.subject_name = E.subject_name\r\nGROUP BY    S.student_id, S.student_name, COALESCE(SUB.subject_name, E.subject_name)\r\nORDER BY    S.student_id, COALESCE(SUB.subject_name, E.subject_name)",
+    "code3" : "SELECT IF(G.GRADE >= 8, S.NAME, 'NULL')\r\n        , G.Grade\r\n        , S.Marks\r\nFROM STUDENTS AS S\r\nINNER JOIN GRADES AS G\r\nON S.MARKS BETWEEN G.MIN_MARK AND G.MAX_MARK\r\nORDER BY    G.GRADE DESC\r\n            , S.NAME\r\n            , S.MARKS\r\n;",
+    "code4" : "SELECT  Start_Date\r\n        , MIN(End_Date)\r\nFROM \r\n    (SELECT Start_Date \r\n     FROM Projects \r\n     WHERE Start_Date NOT IN \r\n        (SELECT End_Date FROM Projects)\r\n    ) a,\r\n    (SELECT End_Date\r\n     FROM Projects\r\n     WHERE End_Date NOT IN \r\n     (SELECT Start_Date FROM Projects)\r\n    ) b\r\nWHERE Start_Date < End_Date\r\nGROUP BY Start_Date\r\nORDER BY MIN(End_Date)-Start_Date, Start_Date\r\n;",
+    "code5" : "WITH numbers AS (\r\n  SELECT LEVEL AS n \r\n    FROM DUAL \r\n    CONNECT BY LEVEL <= 20\r\n)\r\nSELECT RTRIM(LPAD('* ', 2 * (21 - n), '* ')) AS pattern\r\nFROM numbers\r\nORDER BY n;",
+    "code6" : "WITH numbers AS (\r\n  SELECT LEVEL AS n \r\n    FROM DUAL \r\n    CONNECT BY LEVEL <= 20\r\n)\r\nSELECT RPAD('* ', 2 * n, '* ') AS pattern\r\nFROM numbers\r\nORDER BY n;"
+}

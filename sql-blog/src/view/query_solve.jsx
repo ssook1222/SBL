@@ -75,6 +75,10 @@ function Query_solve(){
         navigate('/july-first')
     }
 
+    function JulySecond(){
+        navigate('/july-second')
+    }
+
     return(
         <>
             <div style = {{backgroundColor: 'rgb(58, 44, 26)', width:'100%', height: '3px'}} ></div>
@@ -189,9 +193,20 @@ function Query_solve(){
                                 </Row>
                             </Tab>
                             <Tab eventKey="seven" title="7월">
-                                <Button onClick = {JulyFirst} style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
-                                    🎃 7월 1주차
-                                </Button>
+                                <Row>
+                                    <Col>
+                                        <Button onClick = {JulyFirst} style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
+                                            🎃 7월 1주차
+                                        </Button>
+                                    </Col>
+                                    <Col>
+                                        <Button onClick = {JulySecond} style ={{backgroundColor:"white", fontWeight:"100"}} variant="light">
+                                        😻 7월 2주차
+                                        </Button>
+                                    </Col>
+                                </Row>
+                                
+                                
                             </Tab>
                         </Tabs>
                 </Container>
